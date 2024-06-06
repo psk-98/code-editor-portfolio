@@ -9,9 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.2.3",
     "@octokit/request": "^9.1.1",
     "@octokit/rest": "^20.1.1",
+    "@types/mdx": "^2.0.13",
     "dayjs": "^1.11.11",
+    "markdown-to-jsx": "^7.4.7",
     "next": "14.2.3",
     "next-sanity": "^9.2.0",
     "prismjs": "^1.29.0",

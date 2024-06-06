@@ -36,6 +36,12 @@
 .navLink {
   padding: 2rem;
 }
+.active {
+  border-bottom: 3px solid var(--brown-color);
+}
+.active a {
+  color: var(--white-color);
+}
 .navLink:nth-child(2) {
   border-left: 1px solid var(--line-color);
   border-right: 1px solid var(--line-color);

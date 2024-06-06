@@ -12,7 +12,6 @@
   --gray-color: #607b96;
   --purple-color: #4d5bce;
   --brown-color: #fea55f;
-  /* --menu-background-color: #011627; */
 }
 
 * {
@@ -59,7 +58,7 @@ button {
 @media (min-width: 1024px) {
   .container {
     width: calc(100vw - 10rem);
-    min-height: calc(100vh - 10rem);
+    min-height: calc(100vh - 10rem - 6.25rem);
     margin: 5rem;
   }
   .currentPage {

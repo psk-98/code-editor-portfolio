@@ -1,3 +1,5 @@
+.wrapper {
+}
 .infoTab,
 .leftSide {
   display: flex;
@@ -24,7 +26,38 @@
   font-size: var(1.5rem);
   color: var(--gray-color);
 }
-.detail {
+
+.detail,
+.stars {
   font-size: var(--code-snippets-text-size);
   color: var(--gray-color);
+  cursor: pointer;
+}
+.detail:hover,
+.stars:hover {
+  color: var(--white-color);
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    margin: 4rem 4rem 0 4rem;
+  }
+  .details {
+    display: flex;
+  }
+  .detail {
+    margin: 0 2rem 0 0;
+  }
+  .codeWrapper {
+    margin: 1rem 0 0 0;
+    border: 1px solid var(--line-color);
+    border-radius: 2rem;
+    background: var(--dark-background-color);
+  }
+  .codeWrapper pre {
+    margin: 2rem 1rem;
+  }
+  .codeWrapper code {
+    font-size: var(--code-snippets-text-size);
+  }
 }

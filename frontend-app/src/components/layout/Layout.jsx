@@ -1,16 +1,17 @@
-"use client"
+'use client'
 
-import { Fira_Code } from "next/font/google"
-import { usePathname } from "next/navigation"
-import Prism from "prismjs"
-import { useEffect } from "react"
-import Nav from "../nav/Nav"
+import { Fira_Code } from 'next/font/google'
+import { usePathname } from 'next/navigation'
+import Prism from 'prismjs'
+import { useEffect } from 'react'
+import Nav from '../nav/Nav'
+import Footer from '../footer/Footer'
 
 const fira_code = Fira_Code({
   // weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-  subsets: ["latin"],
-  variable: "--my-font",
+  display: 'swap',
+  subsets: ['latin'],
+  variable: '--my-font',
 })
 
 export default function Layout({ children }) {
@@ -24,11 +25,11 @@ export default function Layout({ children }) {
     <div className={fira_code.className}>
       <div className="container">
         <Nav />
-        {pathname !== "/" && (
+        {pathname !== '/' && (
           <h1 className="currentPage">_{pathname.slice(1)}</h1>
         )}
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   )
