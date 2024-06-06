@@ -1,0 +1,99 @@
+.wrapper {
+  margin: 0 2rem;
+}
+.filesTab {
+  display: none;
+}
+.projectName {
+  font-size: var(--labels-text-size);
+  color: var(--purple-color);
+  margin: 2rem 0;
+  font-weight: 600;
+}
+.projectName span {
+  color: var(--gray-color);
+  font-weight: 400;
+}
+.project {
+  border-radius: 2rem;
+  border: 1px solid var(--line-color);
+  padding: 0 0 4rem 0;
+  margin: 0 0 4rem 0;
+  background: var(--dark-background-color);
+}
+.imgContainer,
+.imgContainer img {
+  width: 100%;
+  height: calc(calc(100vw - 4rem) / 1.9);
+  border-radius: 2rem 2rem 0 0;
+}
+.imgContainer {
+  border-bottom: 1px solid var(--line-color);
+  margin: 0 0 2rem 0;
+}
+.details {
+  padding: 0 2rem;
+}
+.details p {
+  margin: 0 0 2rem 0;
+  font-size: var(--labels-text-size);
+  color: var(--gray-color);
+  line-height: 150%;
+}
+.details a {
+  color: var(--white-color);
+  font-size: var(--code-snippets-text-size);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background: var(--line-color);
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    width: calc(78.78vw + 1rem);
+    margin: 0;
+  }
+  .headerDesktop {
+    display: flex;
+    padding: 2rem;
+    border-right: 1px solid var(--line-color);
+    width: fit-content;
+    color: var(--gray-color);
+    align-items: center;
+    line-height: normal;
+  }
+
+  .headerDesktop button {
+    padding: 0 0 0 5rem;
+    color: var(--gray-color);
+    background: none;
+    border: none;
+    width: fit-content;
+    cursor: pointer;
+  }
+  .headerDesktop button:hover {
+    color: var(--white-color);
+  }
+  .filesTab {
+    display: block;
+    width: calc(100vw - 16.19vw - 8rem);
+    border-bottom: 1px solid var(--line-color);
+  }
+  .projectsWrapper {
+    display: flex;
+    width: 100%;
+    padding: 4rem;
+  }
+  .projectWrapper {
+    margin: 0 0 0 4rem;
+  }
+  .imgContainer,
+  .imgContainer img {
+    width: 100%;
+    height: calc(calc(20.76vw - 4rem) / 1.9);
+    border-radius: 2rem 2rem 0 0;
+  }
+  .details p {
+    font-size: var(--body-text-size);
+  }
+}

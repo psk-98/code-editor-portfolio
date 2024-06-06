@@ -1,0 +1,82 @@
+.wrapper {
+  margin: 4rem 2rem 0 2rem;
+}
+.header {
+  font-size: var(--labels-text-size);
+  margin: 0 0 2rem 0;
+}
+.header span {
+  color: var(--gray-color);
+}
+.text {
+  font-size: var(--labels-text-size);
+  color: var(--gray-color);
+  line-height: 150%;
+  margin: 0 0 6rem 0;
+}
+.filesTab {
+  display: none;
+}
+.codeSnippetWrapper h3 {
+  font-size: var(--labels-text-size);
+  margin: 4rem 0;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 83.81vw;
+    display: flex;
+    margin: 0;
+  }
+  .textAreaWrapper,
+  .codeSnippetWrapper {
+    width: 50%;
+  }
+  .codeSnippetWrapper {
+    border-left: 1px solid var(--line-color);
+  }
+  .text {
+    width: calc(100% - 8rem);
+    padding: 4rem;
+    font-size: var(--body-text-size);
+  }
+  .header {
+    display: none;
+  }
+  .headerDesktop {
+    display: flex;
+    padding: 2rem;
+    border-right: 1px solid var(--line-color);
+    width: fit-content;
+    color: var(--gray-color);
+    align-items: center;
+  }
+
+  .headerDesktop button {
+    padding: 0 0 0 5rem;
+    color: var(--gray-color);
+    background: none;
+    border: none;
+    width: fit-content;
+    cursor: pointer;
+  }
+  .headerDesktop button:hover {
+    color: var(--white-color);
+  }
+  .filesTab {
+    width: 100%;
+    border-bottom: 1px solid var(--line-color);
+  }
+  .codeSnippetWrapper .filesTab div {
+    opacity: 0;
+    cursor: default;
+  }
+  .codeSnippetWrapper .filesTab button {
+    cursor: default;
+  }
+  .codeSnippetWrapper h3 {
+    font-size: var(--body-text-size);
+    color: var(--gray-color);
+    margin: 4rem 0 0 4rem;
+  }
+}

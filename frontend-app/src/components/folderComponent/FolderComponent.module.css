@@ -1,0 +1,78 @@
+.foldersWrapper {
+  width: 100%;
+}
+.shortcuts {
+  display: none;
+}
+.folder {
+  background: var(--line-color);
+  border: none;
+  margin: 0 0 0.5rem 0;
+  width: calc(100vw - 4rem);
+  text-align: left;
+  padding: 1rem 0 1rem 2rem;
+  font-family: var(--my-font);
+}
+
+.icon svg {
+  height: 1rem;
+  margin: 0 1rem 0 0;
+  fill: var(--white-color);
+  transition: transform 0.4s ease-in-out;
+}
+.openIcon svg {
+  transform: rotate(90deg);
+}
+.name {
+  color: var(--white-color);
+  font-size: var(--labels-text-size);
+}
+.filesWrapper {
+  margin: 1rem 2rem;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    display: flex;
+    min-height: calc(100vh - 10rem - 6rem);
+    max-height: 100vh;
+  }
+
+  .foldersWrapper {
+    width: calc(12.38vw + 3.81vw - 2rem - 1px);
+    border-left: 1px solid var(--line-color);
+    border-right: 1px solid var(--line-color);
+  }
+  .folder {
+    background: var(--line-color);
+    border: none;
+    border-bottom: 1px solid var(--line-color);
+    border-top: 1px solid var(--line-color);
+    /* margin: 0 0 0.5rem 0; */
+    /* width: calc(100vw - 4.25rem); */
+    width: 100%;
+    text-align: left;
+    padding: 2rem 0 1.4rem 2rem;
+    font-family: var(--my-font);
+  }
+  .folder:first-child {
+    border-top: none;
+    border-bottom: none;
+  }
+  .icon svg {
+    height: 1rem;
+    margin: 0 1rem 0 0;
+    fill: var(--white-color);
+    transition: transform 0.4s ease-in-out;
+  }
+  .openIcon svg {
+    transform: rotate(90deg);
+  }
+  .name {
+    color: var(--white-color);
+    font-size: var(--labels-text-size);
+  }
+  .filesWrapper {
+    margin: 2rem;
+  }
+}

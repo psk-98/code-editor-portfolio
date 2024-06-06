@@ -1,0 +1,30 @@
+.infoTab,
+.leftSide {
+  display: flex;
+  align-items: center;
+}
+.infoTab {
+  justify-content: space-between;
+}
+.profileImage img {
+  width: 100%;
+  border-radius: 50%;
+}
+.doubleLine {
+  margin: 0 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.username {
+  font-size: var(--code-snippets-text-size);
+  font-weight: 600;
+  color: var(--purple-color);
+}
+.created {
+  font-size: var(1.5rem);
+  color: var(--gray-color);
+}
+.detail {
+  font-size: var(--code-snippets-text-size);
+  color: var(--gray-color);
+}

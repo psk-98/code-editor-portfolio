@@ -1,0 +1,20 @@
+.subFolder {
+  padding: 1rem 0;
+}
+.icon {
+  padding: 0 1rem;
+}
+.file {
+  margin: 0 0 1rem 0;
+}
+.file > * {
+  color: var(--gray-color);
+  font-size: var(--labels-text-size);
+}
+
+@media (min-width: 1024px) {
+  .file {
+    margin: 0 0 2rem 0;
+    font-size: var(--labels-text-size);
+  }
+}

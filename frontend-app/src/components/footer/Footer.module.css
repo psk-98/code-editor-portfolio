@@ -1,0 +1,27 @@
+.sideBarFooter {
+  display: flex;
+  width: 100%;
+}
+.findMe {
+  color: var(--gray-color);
+  width: calc(70% - 2rem);
+  border: 1px solid var(--line-color);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0 0 0 1rem;
+  padding: 1.5rem 0 1.5rem 2rem;
+}
+.socialIcons {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--line-color);
+  border-bottom: none;
+  border-right: none;
+}
+.sideBarFooter svg {
+  height: 3rem;
+  fill: var(--gray-color);
+}

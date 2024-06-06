@@ -1,0 +1,81 @@
+.folderWrapper {
+  width: 100%;
+}
+.folderWrapper h2 {
+  font-size: var(--labels-text-size);
+  color: var(--gray-color);
+  margin: 3rem 2rem 0 2rem;
+}
+.folderWrapper h2 span {
+  color: var(--white-color);
+}
+
+.folder {
+  background: var(--line-color);
+  width: calc(100vw - 4rem);
+  text-align: left;
+  padding: 1rem 0 1rem 2rem;
+  font-family: var(--my-font);
+}
+
+.icon svg {
+  height: 1rem;
+  margin: 0 1rem 0 0;
+  fill: var(--white-color);
+  transition: transform 0.4s ease-in-out;
+}
+.openIcon svg {
+  transform: rotate(90deg);
+}
+.name {
+  color: var(--white-color);
+  font-size: var(--labels-text-size);
+}
+
+.file {
+  padding: 2rem;
+}
+.file a {
+  display: flex;
+  font-size: var(--labels-text-size);
+  color: var(--gray-color);
+}
+
+.checkBox {
+  border: 1px solid var(--line-color);
+  height: 2.375rem;
+  width: 2.375rem;
+}
+.checked .checkBox {
+  background: var(--line-color);
+}
+.file .icon {
+  margin: 0;
+  padding: 0 1rem 0 3rem;
+}
+.file .name {
+  color: var(--gray-color);
+}
+.checked .name {
+  color: var(--white-color);
+}
+@media (min-width: 1024px) {
+  .folderWrapper {
+    width: calc(16.19vw - 2rem);
+    border-right: 1px solid var(--line-color);
+    min-height: calc(100vh - 10rem - 6rem);
+    max-height: 100vh;
+  }
+  .folderWrapper h2 {
+    display: none;
+  }
+  .folder {
+    width: 100%;
+    background: none;
+    border-bottom: 1px solid var(--line-color);
+    margin: 0;
+    text-align: left;
+    padding: 2rem;
+    font-family: var(--my-font);
+  }
+}
