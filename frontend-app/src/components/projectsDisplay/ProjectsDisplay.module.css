@@ -61,6 +61,7 @@
     color: var(--gray-color);
     align-items: center;
     line-height: normal;
+    text-transform: capitalize;
   }
 
   .headerDesktop button {

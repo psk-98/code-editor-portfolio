@@ -20,6 +20,7 @@
 
 .icon svg {
   height: 1rem;
+  width: auto;
   margin: 0 1rem 0 0;
   fill: var(--white-color);
   transition: transform 0.4s ease-in-out;
@@ -39,6 +40,7 @@
   display: flex;
   font-size: var(--labels-text-size);
   color: var(--gray-color);
+  text-transform: capitalize;
 }
 
 .checkBox {
@@ -56,9 +58,14 @@
 .file .name {
   color: var(--gray-color);
 }
+.file svg {
+  height: 3rem;
+  width: auto;
+}
 .checked .name {
   color: var(--white-color);
 }
+
 @media (min-width: 1024px) {
   .folderWrapper {
     width: calc(16.19vw - 2rem);

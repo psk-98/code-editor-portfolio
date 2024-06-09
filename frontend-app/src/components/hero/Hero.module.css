@@ -45,7 +45,7 @@
 
 @media (min-width: 1024px) {
   .heroSection {
-    min-height: calc(100vh - 10rem - 4rem);
+    min-height: calc(100vh - 10rem - 4rem - 6.5rem);
     /* vh minus container margin minus nav padding */
     display: flex;
     align-items: center;
