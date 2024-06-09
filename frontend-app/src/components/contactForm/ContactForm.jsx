@@ -1,7 +1,6 @@
 "use client"
 
-import { useState } from "react"
-import Markdown from "react-markdown"
+import { useEffect, useState } from "react"
 import styles from "./ContactForm.module.css"
 
 export default function ContactForm() {
@@ -10,6 +9,7 @@ export default function ContactForm() {
     email: "",
     message: "",
   })
+  const [codeSnippet, setCodeSnippet] = useState("")
 
   const handleChange = (event) => {
     event.preventDefault()
@@ -17,7 +17,39 @@ export default function ContactForm() {
       ...prev,
       [event.target.id]: event.target.value,
     }))
+    console.log(event.target.value)
   }
+
+  useEffect(() => {
+    const snippet = () => (
+      <>
+        <div>
+          <span className="token keyword">const</span> message{" "}
+          <span className="token operator">=</span>{" "}
+          <span className="token punctuation">{`{`}</span>
+        </div>
+        <div style={{ padding: "0 0 0 1rem" }}>
+          <span className="token literal-property property">name</span>
+          <span className="token operator">:</span>{" "}
+          <span className="token string">"{inputs.name}"</span>,{" "}
+        </div>
+        <div style={{ padding: "0 0 0 1rem" }}>
+          <span className="token literal-property property">email</span>
+          <span className="token operator">:</span>{" "}
+          <span className="token string">"{inputs.email}" </span>,{" "}
+        </div>
+        <div style={{ padding: "0 0 0 1rem" }}>
+          <span className="token literal-property property">message</span>
+          <span className="token operator">:</span>{" "}
+          <span className="token string" style={{ whiteSpace: "break-spaces" }}>
+            "{inputs.message}"
+          </span>
+        </div>
+        <span className="token punctuation">{`}`}</span>
+      </>
+    )
+    setCodeSnippet(snippet)
+  }, [inputs])
 
   return (
     <>
@@ -61,24 +93,30 @@ export default function ContactForm() {
         </form>
       </div>
       <div className={styles.formCodeWrapper}>
-        <Markdown>{`\`\`\`js
-
-
-const message = {
-  name: "${inputs.name}",
-  email: "${inputs.email}",
-  message: "${inputs.message}",
-}
-\`\`\` `}</Markdown>
+        <pre className="language-js">
+          <code>
+            {codeSnippet}
+            {/* <span className="token keyword">const</span> message{" "}
+            <span className="token operator">=</span>{" "}
+            <span className="token punctuation">{`{`}</span>
+            <span className="token literal-property property">name</span>
+            <span className="token operator">:</span>{" "}
+            <span className="token string">"{inputs.name}",</span>
+            <span className="token literal-property property">email</span>
+            <span className="token operator">:</span>{" "}
+            <span className="token string">"{inputs.email}",</span>
+            <span className="token literal-property property">message</span>
+            <span className="token operator">:</span>{" "}
+            <span className="token string">"{inputs.message}"</span>
+            <span className="token punctuation">{`}`}</span> */}
+          </code>
+        </pre>
       </div>
     </>
   )
 }
 
-const markdown = `\`\`\`
-
-
-export default function useScrollLock() {
+function useScrollLock() {
   const lock = () => {
     document.body.style.overflowY = "hidden"
   } // call this function to change the overflowY property to "hidden"
@@ -89,4 +127,3 @@ export default function useScrollLock() {
 
   return [lock, unlock]
 }
-\`\`\` `

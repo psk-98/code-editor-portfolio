@@ -43,9 +43,9 @@
 
 @media (min-width: 1024px) {
   .contactFormWrapper,
-  .formCodeWrappper {
+  .formCodeWrapper {
     width: 50%;
-    width: calc(calc(100vw - 12.38vw - 3.81vw - 2rem - 1px) / 2);
+    max-width: calc(calc(100vw - 12.38vw - 3.81vw - 2rem - 1px) / 2);
   }
   .contactFormWrapper {
     display: flex;
@@ -53,8 +53,28 @@
     justify-content: center;
     border-right: 1px solid var(--line-color);
   }
+  .formCodeWrapper {
+    padding: 12rem 0 0 0;
+  }
   .contactForm {
     width: 20.87vw;
     margin: 12rem 0 0 0;
+  }
+
+  .formCodeWrapper span [class*="string-"] {
+    overflow-x: hidden;
+    white-space: break-spaces;
+  }
+  .formCodeWrappper code [class*="language-"],
+  .formCodeWrappper code {
+    display: flex;
+    line-height: 1.5;
+    font-size: var(--body-text-size);
+  }
+  .formCodeWrappper code div {
+    margin: 0 0 0 1rem;
+  }
+  .formCodeWrappper code > * {
+    font-size: var(--body-text-size) !important;
   }
 }

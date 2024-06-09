@@ -1,15 +1,15 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from './Stack.module.css'
-import StackFolder from './StackFolder'
+import Link from "next/link"
 import {
   CSSIcon,
   HTMLIcon,
   SanityIcon,
+  checkedIcon,
   djangoIcon,
   nextIcon,
   reactIcon,
-} from '../../../public/assests/svgs'
+} from "../../../public/assests/svgs"
+import styles from "./Stack.module.css"
+import StackFolder from "./StackFolder"
 
 export default function StackFile({ tags, searchParams }) {
   return (
@@ -25,7 +25,9 @@ export default function StackFile({ tags, searchParams }) {
             }
             key={tag?.id}
           >
-            <div className={styles.checkBox}></div>
+            <div className={styles.checkBox}>
+              {searchParams?.stack?.includes(tag?.name) && checkedIcon}
+            </div>
             <span className={styles.icon}>{returnStackIcon(tag?.name)}</span>
             <span className={styles.name}>{tag.name}</span>
           </Link>
@@ -37,17 +39,17 @@ export default function StackFile({ tags, searchParams }) {
 
 const returnStackIcon = (stackName) => {
   switch (stackName.toLowerCase()) {
-    case 'react':
+    case "react":
       return reactIcon
-    case 'django':
+    case "django":
       return djangoIcon
-    case 'nextjs':
+    case "nextjs":
       return nextIcon
-    case 'sanity':
+    case "sanity":
       return SanityIcon
-    case 'html':
+    case "html":
       return HTMLIcon
-    case 'css':
+    case "css":
       return CSSIcon
   }
 }

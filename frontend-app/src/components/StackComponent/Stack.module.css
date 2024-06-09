@@ -58,9 +58,11 @@
 .file .name {
   color: var(--gray-color);
 }
-.file svg {
+.file .icon svg {
   height: 3rem;
   width: auto;
+  fill: var(--gray-color);
+  /* stroke: var(--gray-color); */
 }
 .checked .name {
   color: var(--white-color);
