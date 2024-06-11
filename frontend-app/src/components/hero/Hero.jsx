@@ -7,11 +7,13 @@ export default function Hero() {
         <p className={styles.heroGreeting}>Hi. I am</p>
         <h1 className={styles.heroName}>Paul Khoza</h1>
         <p className={styles.heroSubtitle}>{"> Developer"}</p>
-        <p className={styles.heroGray}>// find my profile on Github:</p>
+        <p className={styles.heroGray}>{`// find my profile on Github:`}</p>
         <p className={styles.heroGit}>
           <span className={styles.keyword}>const</span>
           <span className={styles.variableName}>{" githubLink "}</span>={" "}
-          <a href="https://github.com/psk-98">"https://github.com/psk-98"</a>
+          <a href="https://github.com/psk-98">
+            &quot;https://github.com/psk-98&quot;
+          </a>
         </p>
       </div>
       <div className={styles.rightSide}>this is the right side</div>

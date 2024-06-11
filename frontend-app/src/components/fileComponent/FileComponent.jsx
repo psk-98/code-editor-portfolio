@@ -6,9 +6,14 @@ import {
 } from "../../../public/assests/svgs"
 import styles from "./FileComponent.module.css"
 
-export default function FileComponent({ fileName, folderName, socialLink }) {
+export default function FileComponent({
+  fileName,
+  folderName,
+  socialLink,
+  key,
+}) {
   return (
-    <div className={styles.file}>
+    <div className={styles.file} key={key}>
       {folderName == "contacts" ? (
         <div>
           <span className={styles.arrow}>{fileArrow}</span>

@@ -31,18 +31,18 @@ export default function ContactForm() {
         <div style={{ padding: "0 0 0 1rem" }}>
           <span className="token literal-property property">name</span>
           <span className="token operator">:</span>{" "}
-          <span className="token string">"{inputs.name}"</span>,{" "}
+          <span className="token string">&quot;{inputs.name}&quot;</span>,{" "}
         </div>
         <div style={{ padding: "0 0 0 1rem" }}>
           <span className="token literal-property property">email</span>
           <span className="token operator">:</span>{" "}
-          <span className="token string">"{inputs.email}" </span>,{" "}
+          <span className="token string">&quot;{inputs.email}&quot; </span>,{" "}
         </div>
         <div style={{ padding: "0 0 0 1rem" }}>
           <span className="token literal-property property">message</span>
           <span className="token operator">:</span>{" "}
           <span className="token string" style={{ whiteSpace: "break-spaces" }}>
-            "{inputs.message}"
+            &quot;{inputs.message}&quot;
           </span>
         </div>
         <span className="token punctuation">{`}`}</span>

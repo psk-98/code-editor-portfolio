@@ -11,13 +11,13 @@ export default function FoldersWrapper({ data }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.foldersWrapper}>
-        {console.log(returnFolderName(data))}
-        {returnFolderName(data).map((folderName) => (
+        {returnFolderName(data).map((folderName, i) => (
           <FolderComponent
             folderName={folderName}
             data={sortByFolder(data, folderName)}
             openFolder={openFolder}
             setOpenFolder={setOpenFolder}
+            key={i}
           />
         ))}
       </div>

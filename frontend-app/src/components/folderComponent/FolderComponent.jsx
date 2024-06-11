@@ -10,6 +10,7 @@ export default function FolderComponent({
 }) {
   return (
     <>
+      {console.log(data)}
       <button
         className={styles.folder}
         key={data[0]?._id}
@@ -33,6 +34,7 @@ export default function FolderComponent({
               fileName={file.file}
               folderName={folderName}
               socialLink={file?.socialLink}
+              key={file._id}
             />
           ))}
         </div>

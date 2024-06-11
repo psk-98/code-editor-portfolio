@@ -64,7 +64,7 @@
     text-transform: capitalize;
   }
 
-  .headerDesktop button {
+  .headerDesktop a {
     padding: 0 0 0 5rem;
     color: var(--gray-color);
     background: none;
@@ -72,7 +72,7 @@
     width: fit-content;
     cursor: pointer;
   }
-  .headerDesktop button:hover {
+  .headerDesktop a:hover {
     color: var(--white-color);
   }
   .filesTab {

@@ -1,8 +1,8 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import { folderArrow } from '../../../public/assests/svgs'
-import styles from './Stack.module.css'
+import { useState } from "react"
+import { folderArrow } from "../../../public/assests/svgs"
+import styles from "./Stack.module.css"
 
 export default function StackFolder({ children, stack }) {
   const [isOpen, setOpen] = useState(true)
@@ -18,7 +18,7 @@ export default function StackFolder({ children, stack }) {
       </button>
       {isOpen ? children : <></>}
       <h2>
-        <span>// projects</span> / {stack ? stack : 'all'}
+        <span>{`// projects`}</span> / {stack ? stack : "all"}
       </h2>
     </div>
   )
