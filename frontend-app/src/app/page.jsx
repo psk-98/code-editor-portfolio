@@ -2,7 +2,6 @@ import Hero from "@/components/hero/Hero"
 
 export default async function Home() {
   const code = await getCode()
-  console.log(code[0].files)
   return <Hero />
 }
 
