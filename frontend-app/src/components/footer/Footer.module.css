@@ -5,25 +5,30 @@
   border-left: none;
   border-right: none;
   border-bottom: none;
-
+  max-height: 4rem;
   border-radius: 0 0 1rem 1rem;
+  /* justify-content: space-between; */
 }
 .leftSide {
   display: flex;
+  justify-content: space-between;
+}
+.rightSide {
+  display: none;
 }
 .findMe {
   font-size: var(--labels-text-size);
   color: var(--gray-color);
-  width: calc(70% - 2rem);
-
+  min-width: calc(70% - 2rem);
+  white-space: nowrap;
   /* border: 1px solid var(--line-color);
-  border-bottom: none;
+  border-bottom: none; 
   border-left: none;
   border-right: none; */
   border-radius: 0 0 0 1rem;
   padding: 1.5rem 0 1.5rem 2rem;
 }
-.socialIcons {
+.socialIcon {
   width: 15%;
   display: flex;
   justify-content: center;
@@ -35,16 +40,16 @@
   height: 100%;
   font-size: var(--labels-text-size);
 }
-.socialIcons span {
+.socialIcon span {
   color: var(--gray-color);
 }
-.socialIcons svg {
+.socialIcon svg {
   height: 3rem;
   fill: var(--gray-color);
   stroke: var(--gray-color);
 }
 
-.socialIcons:hover .socialIcons span {
+.socialIcon:hover .socialIcon span {
   color: var(--white-color);
 }
 
@@ -71,19 +76,19 @@
     white-space: nowrap;
     padding: 0 2rem;
   }
-  .socialIcons {
+  .socialIcon {
     width: fit-content;
     display: flex;
     padding: 0 2rem;
   }
-  .rightSide .socialIcons {
+  .rightSide .socialIcon {
     border-right: none;
     border-radius: 0 0 1rem 0;
   }
-  .socialIcons:hover .socialIcons span {
+  .socialIcon:hover .socialIcon span {
     color: var(--white-color);
   }
-  .socialIcons svg {
+  .socialIcon svg {
     height: 3rem;
     width: auto;
   }

@@ -29,6 +29,8 @@
 
 .detail,
 .stars {
+  display: flex;
+  align-items: center;
   font-size: var(--code-snippets-text-size);
   color: var(--gray-color);
   cursor: pointer;
@@ -37,7 +39,24 @@
 .stars:hover {
   color: var(--white-color);
 }
-
+.detail svg,
+.stars svg {
+  margin: 0 1rem 0 0;
+}
+.codeWrapper {
+  margin: 1rem 0 4rem 0;
+  border: 1px solid var(--line-color);
+  border-radius: 2rem;
+  background: var(--dark-background-color);
+  max-width: 100%;
+}
+.codeWrapper code {
+  font-size: var(--code-snippets-text-size);
+  text-wrap: wrap;
+}
+.codeWrapper pre {
+  margin: 3rem 2rem;
+}
 @media (min-width: 1024px) {
   .wrapper {
     margin: 4rem 4rem 0 4rem;
@@ -50,14 +69,8 @@
   }
   .codeWrapper {
     margin: 1rem 0 0 0;
-    border: 1px solid var(--line-color);
-    border-radius: 2rem;
-    background: var(--dark-background-color);
   }
   .codeWrapper pre {
     margin: 2rem 1rem;
-  }
-  .codeWrapper code {
-    font-size: var(--code-snippets-text-size);
   }
 }

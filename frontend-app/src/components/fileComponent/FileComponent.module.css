@@ -1,3 +1,9 @@
+.filesWrapper {
+  margin: 1rem 2rem;
+}
+.filesWrapper .file:nth-child(2) .icon path {
+  fill: var(--green-color);
+}
 .subFolder {
   padding: 1rem 0;
 }

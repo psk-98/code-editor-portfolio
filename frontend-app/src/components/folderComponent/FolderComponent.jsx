@@ -28,16 +28,17 @@ export default function FolderComponent({
         <span className={styles.name}>{folderName}</span>
       </button>
       {folderName === openFolder && (
-        <div className={styles.filesWrapper}>
-          {data?.map((file) => (
-            <FileComponent
-              fileName={file.file}
-              folderName={folderName}
-              socialLink={file?.socialLink}
-              key={file._id}
-            />
-          ))}
-        </div>
+        <FileComponent data={data} folderName={folderName} />
+        // <div className={styles.filesWrapper}>
+        //   {data?.map((file) => (
+        //     <FileComponent
+        //       fileName={file.file}
+        //       folderName={folderName}
+        //       socialLink={file?.socialLink}
+        //       key={file._id}
+        //     />
+        //   ))}
+        // </div>
       )}
     </>
   )

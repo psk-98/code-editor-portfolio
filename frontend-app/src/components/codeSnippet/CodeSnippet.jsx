@@ -1,8 +1,9 @@
-import dayjs from 'dayjs'
-import relativeTime from 'dayjs/plugin/relativeTime'
-import Image from 'next/image'
-import CodeBlock from './CodeBlock'
-import styles from './CodeSnippet.module.css'
+import dayjs from "dayjs"
+import relativeTime from "dayjs/plugin/relativeTime"
+import Image from "next/image"
+import { detailsIcon, starsIcon } from "../../../public/assests/svgs"
+import CodeBlock from "./CodeBlock"
+import styles from "./CodeSnippet.module.css"
 
 dayjs.extend(relativeTime)
 
@@ -27,8 +28,8 @@ export default function CodeSnippet({ code }) {
           </div>
         </div>
         <div className={styles.details}>
-          <div className={styles.detail}>details</div>
-          <div className={styles.stars}>stars</div>
+          <div className={styles.detail}>{detailsIcon}details</div>
+          <div className={styles.stars}>{starsIcon}stars</div>
         </div>
       </div>
       <CodeBlock link={returnRawUrl(code.files)[0]} />
@@ -39,7 +40,7 @@ export default function CodeSnippet({ code }) {
 const returnRawUrl = (file) => {
   //   console.log(file)
   const keys = Object.keys(file)
-  let rawUrl = ''
+  let rawUrl = ""
   //   console.log(keys)
   keys.forEach((key) => {
     rawUrl = file[key].raw_url
