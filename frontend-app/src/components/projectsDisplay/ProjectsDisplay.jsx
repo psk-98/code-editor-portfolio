@@ -11,7 +11,6 @@ export default function ProjectsDisplay({ projects, searchParams }) {
           {searchParams?.stack} <Link href="/projects">{closeIcon}</Link>
         </h2>
       </div>
-      {console.log(returnProjects(projects))}
       <div className={styles.projectsWrapper}>
         {returnProjects(projects).map((project) => (
           <div className={styles.projectWrapper} key={project[0]?._id}>
@@ -43,12 +42,8 @@ const returnProjects = (projects) => {
   let filteredProjects = []
 
   for (let i = 0; i < projects.length; i++) {
-    // filteredProjects = [...filteredProjects?.projects]
     filteredProjects.push(projects[i]?.projects)
   }
-  // console.log("function")
-  // console.log(filteredProjects)
-  // console.log("function")
 
   return filteredProjects
 }

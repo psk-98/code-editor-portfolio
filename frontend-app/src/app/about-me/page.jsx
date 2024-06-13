@@ -6,12 +6,9 @@ import { filterByFile } from "@/utils/filterByFile"
 export default async function About({ searchParams }) {
   const data = await getData()
   const code = await getCode()
-  // console.log(await getCode())
-  const snippet = await getSnippet()
 
   return (
     <div className="aboutWrapper">
-      {console.log(code[0])}
       <FoldersWrapper data={data} searchParams={searchParams} />
       <TextArea
         data={filterByFile(data, searchParams?.file)}
@@ -41,15 +38,4 @@ async function getCode() {
   const res = await fetch(`https://api.github.com/users/psk-98/gists`)
 
   return res.json()
-}
-
-async function getSnippet() {
-  const res = await fetch(
-    `https://gist.githubusercontent.com/psk-98/1a32ec64a1d4525fa340b00fbc4c7aa4/raw/30cb388daa1154cd08ecd7bd59d7e01412e43615/returnFolderName.js`
-  )
-  console.log("snippets")
-  console.log(res)
-  console.log("snippets")
-
-  // return res.json()
 }

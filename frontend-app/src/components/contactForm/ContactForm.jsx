@@ -17,7 +17,6 @@ export default function ContactForm() {
       ...prev,
       [event.target.id]: event.target.value,
     }))
-    console.log(event.target.value)
   }
 
   useEffect(() => {
