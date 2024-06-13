@@ -10,7 +10,6 @@ export default function FolderComponent({
 }) {
   return (
     <>
-      {console.log(data)}
       <button
         className={styles.folder}
         key={data[0]?._id}

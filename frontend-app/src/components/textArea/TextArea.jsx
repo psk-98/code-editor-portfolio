@@ -3,14 +3,6 @@ import CodeSnippet from "../codeSnippet/CodeSnippet"
 import styles from "./TextArea.module.css"
 
 export default function TextArea({ data, searchParams, code }) {
-  console.log(
-    "................................................................"
-  )
-  console.log(searchParams)
-  console.log(
-    "................................................................"
-  )
-
   return (
     <div className={styles.wrapper}>
       <h2 className={styles.header}>
@@ -27,7 +19,6 @@ export default function TextArea({ data, searchParams, code }) {
         </div>
         <p className={styles.text}>
           {data[0]?.content.map((line) => {
-            console.log(line.children)
             return (
               <>
                 <p key={line._key}>{line.children[0].text}</p>

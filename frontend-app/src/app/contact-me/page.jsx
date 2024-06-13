@@ -18,6 +18,5 @@ async function getDatas() {
   } | order(file asc)`
   const res = await sanityClient.fetch(query)
 
-  // console.log(res)
   return res
 }

@@ -21,7 +21,7 @@ export default function CodeSnippet({ code }) {
             />
           </div>
           <div className={styles.doubleLine}>
-            <span className={styles.username}>{code.owner.login}</span>
+            <span className={styles.username}>@{code.owner.login}</span>
             <span className={styles.created}>
               {`Created ${dayjs(code.created_at).fromNow()}`}
             </span>
@@ -38,13 +38,10 @@ export default function CodeSnippet({ code }) {
 }
 
 const returnRawUrl = (file) => {
-  //   console.log(file)
   const keys = Object.keys(file)
   let rawUrl = ""
-  //   console.log(keys)
   keys.forEach((key) => {
     rawUrl = file[key].raw_url
-    // console.log(`${key}: ${rawUrl}`)
   })
 
   return [rawUrl]

@@ -24,6 +24,12 @@ export const projects = defineType({
       type: 'text',
     },
     {
+      name: 'link',
+      title: 'Link',
+      description: 'Link to the project',
+      type: 'url',
+    },
+    {
       name: 'stack',
       title: 'Stack',
       type: 'array',
