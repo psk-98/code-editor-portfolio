@@ -1,5 +1,5 @@
 .heroSection {
-  min-height: calc(100vh - 4rem - 6vh);
+  min-height: calc(100vh - 4rem - 6vh - 4rem);
   /* vh minus container padding minus mobile nav height */
   max-height: 100vh;
   display: flex;

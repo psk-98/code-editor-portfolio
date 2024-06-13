@@ -27,9 +27,6 @@
   color: var(--white-color);
   font-size: var(--labels-text-size);
 }
-.filesWrapper {
-  margin: 1rem 2rem;
-}
 
 @media (min-width: 1024px) {
   .wrapper {

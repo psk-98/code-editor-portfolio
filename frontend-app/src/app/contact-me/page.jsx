@@ -2,8 +2,6 @@ import ContactForm from "@/components/contactForm/ContactForm"
 import FoldersWrapper from "@/components/folderComponent/FoldersWrapper"
 import { sanityClient } from "@/utils/configSanity"
 
-require("prismjs/components/prism-javascript")
-
 export default async function Contact() {
   const data = await getDatas()
   return (

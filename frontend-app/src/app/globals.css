@@ -33,7 +33,7 @@ body {
   font-size: 8px;
   background: var(--dark-background-color);
   color: var(--white-color);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 button {
   background: none;
