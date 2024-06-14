@@ -32,7 +32,13 @@ export default function ProjectsDisplay({ projects, searchParams }) {
                   <p className={styles.description}>
                     {project[0]?.description}
                   </p>
-                  <Link href="#">view-project</Link>
+                  <a
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    href={project[0]?.link}
+                  >
+                    view-project
+                  </a>
                 </div>
               </div>
             </div>
