@@ -10,10 +10,7 @@ export default function Side({ setToggle, toggle }) {
         {navList.map((item, i) => (
           <li key={i} className={styles.sideItem}>
             <Link
-              href={{
-                pathname: item,
-                query: { stack: ["react", "nextjs"] },
-              }}
+              href={item !== "hello" ? item : "/"}
               onClick={() => setToggle(false)}
             >
               {"_" + item}

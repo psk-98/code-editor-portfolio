@@ -13,7 +13,9 @@ export default function FolderComponent({
       <button
         className={styles.folder}
         key={data[0]?._id}
-        onClick={() => setOpenFolder(folderName)}
+        onClick={() =>
+          setOpenFolder(folderName == openFolder ? "" : folderName)
+        }
       >
         <span
           className={
@@ -28,16 +30,6 @@ export default function FolderComponent({
       </button>
       {folderName === openFolder && (
         <FileComponent data={data} folderName={folderName} />
-        // <div className={styles.filesWrapper}>
-        //   {data?.map((file) => (
-        //     <FileComponent
-        //       fileName={file.file}
-        //       folderName={folderName}
-        //       socialLink={file?.socialLink}
-        //       key={file._id}
-        //     />
-        //   ))}
-        // </div>
       )}
     </>
   )

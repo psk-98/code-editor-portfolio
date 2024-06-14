@@ -1,8 +1,10 @@
 import styles from "./Hero.module.css"
+import HeroBackground from "./HeroBackground"
 
 export default function Hero() {
   return (
     <section className={styles.heroSection}>
+      <HeroBackground />
       <div className={styles.leftSide}>
         <p className={styles.heroGreeting}>Hi. I am</p>
         <h1 className={styles.heroName}>Paul Khoza</h1>

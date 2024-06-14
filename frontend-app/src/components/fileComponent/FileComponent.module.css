@@ -12,6 +12,7 @@
 }
 .file {
   margin: 0 0 1rem 0;
+  word-break: break-all;
 }
 .file > * {
   color: var(--gray-color);

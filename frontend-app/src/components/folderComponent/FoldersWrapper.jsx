@@ -6,7 +6,7 @@ import FolderComponent from "./FolderComponent"
 import styles from "./FolderComponent.module.css"
 
 export default function FoldersWrapper({ data }) {
-  const [openFolder, setOpenFolder] = useState(folderNames[0])
+  const [openFolder, setOpenFolder] = useState("")
 
   return (
     <div className={styles.wrapper}>

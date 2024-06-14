@@ -8,7 +8,6 @@ export default async function Projects({ searchParams }) {
 
   return (
     <div className="projectsWrapper">
-      {console.log(projects)}
       <StackFile searchParams={searchParams} tags={tags} />
       <ProjectsDisplay projects={projects} searchParams={searchParams} />
     </div>
@@ -22,18 +21,16 @@ async function getTags() {
   }`
   const res = await sanityClient.fetch(query)
 
-  console.log(res)
-
   return res
 }
 
-async function getProjects({ searchParams }) {
-  const query = `*[_type=='stackTags' && name=='React' || name=='HTML'] 
+async function getProjects(searchParams) {
+  const query = `*[_type=='stackTags' && name=='${searchParams?.stack}'] 
   {
     _id, name,
     "projects": *[_type == 'projects' && references(^._id)] 
     {
-      name, description,
+      name, description, link,
       'coverUrl': projectCoverImage.asset->url
     }
   }`

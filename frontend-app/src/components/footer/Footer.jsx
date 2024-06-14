@@ -8,9 +8,9 @@ export default function Footer() {
         <div className={styles.findMe}>find me on:</div>
         <div className={styles.socialIcon}>
           <a href="#">{emailIcon}</a>
-          <div className={styles.socialIcon}>
-            <a href="#">{githubIcon}</a>
-          </div>
+        </div>
+        <div className={styles.socialIcon}>
+          <a href="#">{githubIcon}</a>
         </div>
       </div>
       <div className={styles.rightSide}>

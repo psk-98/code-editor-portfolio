@@ -12,6 +12,8 @@
 .leftSide {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 .rightSide {
   display: none;
@@ -28,11 +30,15 @@
   border-radius: 0 0 0 1rem;
   padding: 1.5rem 0 1.5rem 2rem;
 }
+.socialIcon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .socialIcon {
   width: 15%;
   display: flex;
   justify-content: center;
-  align-items: center;
   border: 1px solid var(--line-color);
   border-top: none;
   border-bottom: none;
@@ -40,6 +46,10 @@
   height: 100%;
   font-size: var(--labels-text-size);
 }
+.leftSide .socialIcon:last-child {
+  border: none;
+}
+
 .socialIcon span {
   color: var(--gray-color);
 }
@@ -63,15 +73,17 @@
   .leftSide {
     max-width: calc(12.38vw + 3.81vw - 2rem - 1px);
   }
+  .rightSide {
+    display: flex;
+  }
+  .leftSide .socialIcon:last-child {
+    display: none;
+  }
   .findMe {
     color: var(--gray-color);
     display: flex;
     align-items: center;
     width: fit-content;
-    /* border: 1px solid var(--line-color);
-    border-bottom: none;
-    border-left: none;
-    border-right: none; */
     border-radius: 0 0 0 1rem;
     white-space: nowrap;
     padding: 0 2rem;
