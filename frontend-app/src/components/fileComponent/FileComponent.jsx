@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import {
   externalLinkIcon,
   fileArrow,
@@ -7,6 +8,8 @@ import {
 import styles from "./FileComponent.module.css"
 
 export default function FileComponent({ data, folderName }) {
+  const pathname = usePathname()
+
   return (
     <div className={styles.filesWrapper}>
       {data?.map((file, i) => (
@@ -19,8 +22,14 @@ export default function FileComponent({ data, folderName }) {
               <span className={styles.fileName}>{file.file}</span>
             </div>
           ) : folderName == "also-find-me-on" ? (
-            <a target="_blank" rel="noopener noreferrer" href={socialLink}>
-              <span className={styles.icon}>{externalLinkIcon}</span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={file?.socialLink}
+            >
+              <span className={styles.icon + " " + styles.noChangeColor}>
+                {externalLinkIcon}
+              </span>
               <span className={styles.fileName}>{file.file}</span>
             </a>
           ) : (

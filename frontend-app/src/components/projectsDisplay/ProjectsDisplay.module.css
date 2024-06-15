@@ -1,6 +1,11 @@
 .wrapper {
   margin: 0 2rem;
 }
+.warning {
+  font-size: var(--labels-text-size);
+  color: var(--brown-color);
+  margin: 3rem 0;
+}
 .filesTab {
   display: none;
 }

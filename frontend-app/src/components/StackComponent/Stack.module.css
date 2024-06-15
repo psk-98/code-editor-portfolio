@@ -5,6 +5,7 @@
   font-size: var(--labels-text-size);
   color: var(--gray-color);
   margin: 3rem 2rem 0 2rem;
+  text-transform: lowercase;
 }
 .folderWrapper h2 span {
   color: var(--white-color);

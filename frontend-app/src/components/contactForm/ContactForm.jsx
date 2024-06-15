@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
+import FormCode from "../formCode/FormCode"
 import styles from "./ContactForm.module.css"
 
 export default function ContactForm() {
@@ -9,7 +10,7 @@ export default function ContactForm() {
     email: "",
     message: "",
   })
-  const [codeSnippet, setCodeSnippet] = useState("")
+  // const [codeSnippet, setCodeSnippet] = useState("")
 
   const handleChange = (event) => {
     event.preventDefault()
@@ -19,36 +20,36 @@ export default function ContactForm() {
     }))
   }
 
-  useEffect(() => {
-    const snippet = () => (
-      <>
-        <div>
-          <span className="token keyword">const</span> message{" "}
-          <span className="token operator">=</span>{" "}
-          <span className="token punctuation">{`{`}</span>
-        </div>
-        <div style={{ padding: "0 0 0 1rem" }}>
-          <span className="token literal-property property">name</span>
-          <span className="token operator">:</span>{" "}
-          <span className="token string">&quot;{inputs.name}&quot;</span>,{" "}
-        </div>
-        <div style={{ padding: "0 0 0 1rem" }}>
-          <span className="token literal-property property">email</span>
-          <span className="token operator">:</span>{" "}
-          <span className="token string">&quot;{inputs.email}&quot; </span>,{" "}
-        </div>
-        <div style={{ padding: "0 0 0 1rem" }}>
-          <span className="token literal-property property">message</span>
-          <span className="token operator">:</span>{" "}
-          <span className="token string" style={{ whiteSpace: "break-spaces" }}>
-            &quot;{inputs.message}&quot;
-          </span>
-        </div>
-        <span className="token punctuation">{`}`}</span>
-      </>
-    )
-    setCodeSnippet(snippet)
-  }, [inputs])
+  // useEffect(() => {
+  //   const snippet = () => (
+  //     <>
+  //       <div>
+  //         <span className="token keyword">const</span> message{" "}
+  //         <span className="token operator">=</span>{" "}
+  //         <span className="token punctuation">{`{`}</span>
+  //       </div>
+  //       <div style={{ padding: "0 0 0 1rem" }}>
+  //         <span className="token literal-property property">name</span>
+  //         <span className="token operator">:</span>{" "}
+  //         <span className="token string">&quot;{inputs.name}&quot;</span>,{" "}
+  //       </div>
+  //       <div style={{ padding: "0 0 0 1rem" }}>
+  //         <span className="token literal-property property">email</span>
+  //         <span className="token operator">:</span>{" "}
+  //         <span className="token string">&quot;{inputs.email}&quot; </span>,{" "}
+  //       </div>
+  //       <div style={{ padding: "0 0 0 1rem" }}>
+  //         <span className="token literal-property property">message</span>
+  //         <span className="token operator">:</span>{" "}
+  //         <span className="token string" style={{ whiteSpace: "break-spaces" }}>
+  //           &quot;{inputs.message}&quot;
+  //         </span>
+  //       </div>
+  //       <span className="token punctuation">{`}`}</span>
+  //     </>
+  //   )
+  //   setCodeSnippet(snippet)
+  // }, [inputs])
 
   return (
     <>
@@ -91,38 +92,12 @@ export default function ContactForm() {
           </div>
         </form>
       </div>
-      <div className={styles.formCodeWrapper}>
+      <FormCode inputs={inputs} />
+      {/* <div className={styles.formCodeWrapper}>
         <pre className="language-js">
-          <code>
-            {codeSnippet}
-            {/* <span className="token keyword">const</span> message{" "}
-            <span className="token operator">=</span>{" "}
-            <span className="token punctuation">{`{`}</span>
-            <span className="token literal-property property">name</span>
-            <span className="token operator">:</span>{" "}
-            <span className="token string">"{inputs.name}",</span>
-            <span className="token literal-property property">email</span>
-            <span className="token operator">:</span>{" "}
-            <span className="token string">"{inputs.email}",</span>
-            <span className="token literal-property property">message</span>
-            <span className="token operator">:</span>{" "}
-            <span className="token string">"{inputs.message}"</span>
-            <span className="token punctuation">{`}`}</span> */}
-          </code>
+          <code>{codeSnippet}</code>
         </pre>
-      </div>
+      </div> */}
     </>
   )
-}
-
-function useScrollLock() {
-  const lock = () => {
-    document.body.style.overflowY = "hidden"
-  } // call this function to change the overflowY property to "hidden"
-
-  const unlock = () => {
-    document.body.style.overflowY = "scroll"
-  } // call this function to change the overflowY property to "hidden"
-
-  return [lock, unlock]
 }

@@ -17,7 +17,14 @@ export default function StackFolder({ children, stack }) {
         <span className={styles.name}>projects</span>
       </button>
       {isOpen ? children : <></>}
-      <h2>{stack && <span>{`// projects`}</span> / stack}</h2>
+      <h2>
+        {stack && (
+          <>
+            <span>{`// projects`}</span> / {stack}
+          </>
+        )}
+      </h2>
+      {console.log(stack)}
     </div>
   )
 }

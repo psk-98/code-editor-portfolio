@@ -15,6 +15,7 @@ export default function StackFile({ tags, searchParams }) {
   return (
     <StackFolder stack={searchParams?.stack}>
       <div className={styles.file}>
+        {console.log(searchParams.stack)}
         {tags?.map((tag) => (
           <Link
             href={`/projects?stack=${tag?.name}`}

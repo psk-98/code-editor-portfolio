@@ -15,7 +15,6 @@ export default function ProjectsDisplay({ projects, searchParams }) {
         {searchParams?.stack && returnProjects(projects)[0]?.length != 0 ? (
           returnProjects(projects).map((project) => (
             <div className={styles.projectWrapper} key={project[0]?._id}>
-              {/* {console.log(project)} */}
               <h3 className={styles.projectName}>
                 {project[0]?.name} <span>{`// _category`}</span>
               </h3>
@@ -44,11 +43,11 @@ export default function ProjectsDisplay({ projects, searchParams }) {
             </div>
           ))
         ) : (
-          <div>
-            <span className={styles.warning}>
+          <div className={styles.warning}>
+            <span>
               {searchParams?.stack
-                ? "No projects, please select another filter"
-                : "Please select a filter"}
+                ? "No projects, please select another project filter"
+                : "Please select a project filter"}
             </span>
           </div>
         )}

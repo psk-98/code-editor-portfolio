@@ -4,6 +4,9 @@
 .filesWrapper .file:nth-child(2) .icon path {
   fill: var(--green-color);
 }
+.filesWrapper .file:nth-child(2) .noChangeColor path {
+  fill: var(--gray-color);
+}
 .subFolder {
   padding: 1rem 0;
 }

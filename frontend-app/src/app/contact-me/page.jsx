@@ -3,7 +3,7 @@ import FoldersWrapper from "@/components/folderComponent/FoldersWrapper"
 import { sanityClient } from "@/utils/configSanity"
 
 export default async function Contact() {
-  const data = await getDatas()
+  const data = await getData()
   return (
     <div className="contactWrapper">
       <FoldersWrapper data={data} />
@@ -12,7 +12,7 @@ export default async function Contact() {
   )
 }
 
-async function getDatas() {
+async function getData() {
   const query = `*[_type == 'contactMe'] {
     _id,folder,file,socialLink
   } | order(file asc)`

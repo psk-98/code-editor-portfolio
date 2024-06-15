@@ -56,8 +56,9 @@ button {
   font-size: var(--code-snippets-text-size);
 }
 .aboutWrapper,
-.projectsWrapper {
-  min-height: calc(100vh - 4rem - 6.25rem - 8rem);
+.projectsWrapper,
+.thanksWrapper {
+  min-height: calc(100vh - 4rem - 6.25rem - 14rem);
 }
 @media (min-width: 1024px) {
   html,
@@ -75,7 +76,8 @@ button {
   }
   .aboutWrapper,
   .contactWrapper,
-  .projectsWrapper {
+  .projectsWrapper,
+  .thanksWrapper {
     display: flex;
   }
 }
