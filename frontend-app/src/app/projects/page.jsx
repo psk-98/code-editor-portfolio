@@ -38,3 +38,9 @@ async function getProjects(searchParams) {
 
   return res
 }
+
+export const metadata = {
+  title: "My Projects | Website Software Developer, Frontend, Backend",
+  description:
+    "Paul Khoza is a proficient software developer specializing in creating websites. Discover more about his contributions to the development of software for the web.",
+}
