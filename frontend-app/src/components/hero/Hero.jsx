@@ -1,3 +1,4 @@
+import HeroCarousel from "../heroCarousel/HeroCarousel"
 import styles from "./Hero.module.css"
 import HeroBackground from "./HeroBackground"
 
@@ -18,7 +19,9 @@ export default function Hero() {
           </a>
         </p>
       </div>
-      <div className={styles.rightSide}>this is the right side</div>
+      <div className={styles.rightSide}>
+        <HeroCarousel />
+      </div>
     </section>
   )
 }

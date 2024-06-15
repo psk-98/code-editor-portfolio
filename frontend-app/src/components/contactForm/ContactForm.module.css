@@ -40,9 +40,6 @@
   border: none;
   cursor: pointer;
 }
-.formCodeWrapper {
-  display: none;
-}
 
 @media (min-width: 1024px) {
   .contactFormWrapper,

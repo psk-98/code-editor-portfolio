@@ -79,11 +79,17 @@
     display: flex;
     align-items: center;
   }
+  .heroBackground {
+    min-height: calc(100vh - 10rem - 4rem - 6.5rem);
+  }
   .leftSide,
   .rightSide {
     width: 50%;
   }
   .leftSide {
     padding: 0 0 0 16.19vw;
+  }
+  .rightSide {
+    display: block;
   }
 }

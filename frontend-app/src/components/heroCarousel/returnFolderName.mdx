@@ -1,0 +1,11 @@
+```javascript
+const returnFolderName = (data) => {
+  let folders = []
+  data.forEach((item) => {
+    if (!folders.includes(item.folder)) {
+      folders.push(item.folder)
+    }
+  })
+  return folders
+}
+```
