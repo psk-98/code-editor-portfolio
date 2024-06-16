@@ -24,6 +24,12 @@ export const projects = defineType({
       type: 'text',
     },
     {
+      name: 'category',
+      title: 'Category',
+      description: 'Category of the project frontend, backend, fullstack etc',
+      type: 'string',
+    },
+    {
       name: 'link',
       title: 'Link',
       description: 'Link to the project',
