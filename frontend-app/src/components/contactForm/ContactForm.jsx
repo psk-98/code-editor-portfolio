@@ -10,7 +10,6 @@ export default function ContactForm() {
     email: "",
     message: "",
   })
-  // const [codeSnippet, setCodeSnippet] = useState("")
 
   const handleChange = (event) => {
     event.preventDefault()
@@ -19,37 +18,6 @@ export default function ContactForm() {
       [event.target.id]: event.target.value,
     }))
   }
-
-  // useEffect(() => {
-  //   const snippet = () => (
-  //     <>
-  //       <div>
-  //         <span className="token keyword">const</span> message{" "}
-  //         <span className="token operator">=</span>{" "}
-  //         <span className="token punctuation">{`{`}</span>
-  //       </div>
-  //       <div style={{ padding: "0 0 0 1rem" }}>
-  //         <span className="token literal-property property">name</span>
-  //         <span className="token operator">:</span>{" "}
-  //         <span className="token string">&quot;{inputs.name}&quot;</span>,{" "}
-  //       </div>
-  //       <div style={{ padding: "0 0 0 1rem" }}>
-  //         <span className="token literal-property property">email</span>
-  //         <span className="token operator">:</span>{" "}
-  //         <span className="token string">&quot;{inputs.email}&quot; </span>,{" "}
-  //       </div>
-  //       <div style={{ padding: "0 0 0 1rem" }}>
-  //         <span className="token literal-property property">message</span>
-  //         <span className="token operator">:</span>{" "}
-  //         <span className="token string" style={{ whiteSpace: "break-spaces" }}>
-  //           &quot;{inputs.message}&quot;
-  //         </span>
-  //       </div>
-  //       <span className="token punctuation">{`}`}</span>
-  //     </>
-  //   )
-  //   setCodeSnippet(snippet)
-  // }, [inputs])
 
   return (
     <>
@@ -93,11 +61,6 @@ export default function ContactForm() {
         </form>
       </div>
       <FormCode inputs={inputs} />
-      {/* <div className={styles.formCodeWrapper}>
-        <pre className="language-js">
-          <code>{codeSnippet}</code>
-        </pre>
-      </div> */}
     </>
   )
 }

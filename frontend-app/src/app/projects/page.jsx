@@ -30,7 +30,7 @@ async function getProjects(searchParams) {
     _id, name,
     "projects": *[_type == 'projects' && references(^._id)] 
     {
-      name, description, link,
+      name, description, link, category,
       'coverUrl': projectCoverImage.asset->url
     }
   }`

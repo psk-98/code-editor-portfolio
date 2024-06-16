@@ -14,6 +14,10 @@
   line-height: 150%;
   margin: 0 0 6rem 0;
 }
+.text a {
+  color: var(--gray-color);
+  text-decoration: underline;
+}
 .filesTab {
   display: none;
 }
@@ -64,6 +68,7 @@
     color: var(--white-color);
   }
   .filesTab {
+    display: block;
     width: 100%;
     border-bottom: 1px solid var(--line-color);
   }

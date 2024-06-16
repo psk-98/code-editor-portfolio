@@ -1,5 +1,5 @@
 .wrapper {
-  min-height: (100vh - 10rem - 4rem - 6.5rem);
+  min-height: (100vh - 10rem - 4rem - 6.5rem - 2px);
   overflow: hidden;
 }
 

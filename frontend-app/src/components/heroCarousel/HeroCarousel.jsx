@@ -60,6 +60,7 @@ export default function HeroCarousel() {
             <motion.li
               style={liStyle}
               className={currentPage == i && styles.active}
+              key={i}
             >
               {slide}
             </motion.li>
@@ -81,4 +82,4 @@ const liStyle = {
   //   textAlign: "center",
 }
 
-const slides = [<Slide1 />, <Slide2 />, <Slide3 />]
+const slides = [<Slide1 key={0} />, <Slide2 key={1} />, <Slide3 key={2} />]

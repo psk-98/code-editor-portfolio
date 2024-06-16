@@ -35,6 +35,9 @@
   color: var(--gray-color);
   cursor: pointer;
 }
+.stars {
+  display: none;
+}
 .detail:hover,
 .stars:hover {
   color: var(--white-color);
@@ -61,12 +64,14 @@
   .wrapper {
     margin: 4rem 4rem 0 4rem;
   }
-  .details {
+  .details,
+  .stars {
     display: flex;
   }
   .detail {
     margin: 0 2rem 0 0;
   }
+
   .codeWrapper {
     margin: 1rem 0 0 0;
   }

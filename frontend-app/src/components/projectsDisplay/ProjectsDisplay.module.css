@@ -90,16 +90,14 @@
   .projectsWrapper {
     display: flex;
     flex-wrap: wrap;
-
     max-width: 100%;
     padding: 4rem;
-    margin: 0 0 12rem 0;
+    /* margin: 0 0 12rem 0; */
     max-height: calc(100vh - 10rem - 6rem - 3rem);
-    overflow: scroll;
+    /* overflow: scroll; */
   }
   .projectWrapper {
     margin: 0 0 0 4rem;
-
     width: 19.27vw;
   }
   .imgContainer,

@@ -1,5 +1,5 @@
 .heroSection {
-  min-height: calc(100vh - 4rem - 6vh - 4rem);
+  min-height: calc(100vh - 4rem - 6vh - 6.25rem);
   /* vh minus container padding minus mobile nav height */
   max-height: 100vh;
   display: flex;
@@ -11,7 +11,7 @@
   font-size: var(--body-text-size);
 }
 .heroName {
-  margin: 1rem 0 1rem 1rem;
+  margin: 0 0 0 1rem;
   font-size: var(--headline-text-size);
 }
 .heroSubtitle {
@@ -52,8 +52,8 @@
   right: 2rem;
   left: 2rem;
   position: absolute;
-  min-height: calc(100vh - 4rem - 6vh - 4rem);
-  height: calc(100vh - 4rem - 6vh - 4rem);
+  min-height: calc(100vh - 4rem - 6vh - 6.25rem);
+  height: calc(100vh - 4rem - 6vh - 6.25rem);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -80,7 +80,11 @@
     align-items: center;
   }
   .heroBackground {
-    min-height: calc(100vh - 10rem - 4rem - 6.5rem);
+    max-height: calc(100vh - 4rem - 6vh - 4rem - 6rem);
+    min-height: calc(100vh - 4rem - 6vh - 4rem - 6rem + 4px);
+    width: calc(100vw - 10rem + 1px);
+    left: 5rem;
+    max-width: calc(100vw - 10rem + 1px);
   }
   .leftSide,
   .rightSide {

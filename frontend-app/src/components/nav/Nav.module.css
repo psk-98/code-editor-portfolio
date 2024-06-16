@@ -87,6 +87,12 @@ div.open {
   color: var(--white-color);
   font-size: var(--labels-text-size);
 }
+.sideList .active {
+  background: var(--dark-background-color);
+}
+.sideList .active a {
+  color: var(--gray-color);
+}
 
 @media (min-width: 1024px) {
   .leftSide {

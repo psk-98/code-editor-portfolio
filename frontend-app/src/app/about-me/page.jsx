@@ -14,10 +14,14 @@ export default async function About({ searchParams }) {
         data={filterByFile(data, searchParams?.file)}
         searchParams={searchParams}
         code={code[0]}
+        codeDetails={codeDetails}
       />
     </div>
   )
 }
+
+const codeDetails =
+  "This is used to show the drop downs for personal-info, contacts etc..."
 
 async function getData() {
   const query = `*[_type == 'aboutMe'] {

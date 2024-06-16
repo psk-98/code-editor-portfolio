@@ -14,7 +14,6 @@ export default function FileComponent({ data, folderName }) {
     <div className={styles.filesWrapper}>
       {data?.map((file, i) => (
         <div className={styles.file} key={i}>
-          {console.log(file)}
           {folderName == "contacts" ? (
             <div>
               <span className={styles.arrow}>{fileArrow}</span>

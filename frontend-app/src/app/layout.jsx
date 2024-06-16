@@ -1,4 +1,3 @@
-import "prismjs/plugins/line-numbers/prism-line-numbers.css"
 import "./globals.css"
 import "./prism-atom-dark.css"
 

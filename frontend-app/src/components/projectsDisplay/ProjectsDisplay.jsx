@@ -16,7 +16,7 @@ export default function ProjectsDisplay({ projects, searchParams }) {
           returnProjects(projects).map((project) => (
             <div className={styles.projectWrapper} key={project[0]?._id}>
               <h3 className={styles.projectName}>
-                {project[0]?.name} <span>{`// _category`}</span>
+                {project[0]?.name} <span>{`// _${project[0]?.category}`}</span>
               </h3>
               <div className={styles.project}>
                 <div className={styles.imgContainer}>
@@ -58,7 +58,6 @@ export default function ProjectsDisplay({ projects, searchParams }) {
 
 const returnProjects = (projects) => {
   let filteredProjects = []
-  // console.log(projects)
   for (let i = 0; i < projects.length; i++) {
     filteredProjects.push(projects[i]?.projects)
   }

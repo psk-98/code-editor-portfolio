@@ -7,15 +7,27 @@ export default function Footer() {
       <div className={styles.leftSide}>
         <div className={styles.findMe}>find me on:</div>
         <div className={styles.socialIcon}>
-          <a href="#">{emailIcon}</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            {emailIcon}
+          </a>
         </div>
         <div className={styles.socialIcon}>
-          <a href="#">{githubIcon}</a>
+          <a
+            href="https://github.com/psk-98"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {githubIcon}
+          </a>
         </div>
       </div>
       <div className={styles.rightSide}>
         <div className={styles.socialIcon}>
-          <a href="#">
+          <a
+            href="https://github.com/psk-98"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span>@psk-98</span> {githubIcon}
           </a>
         </div>
