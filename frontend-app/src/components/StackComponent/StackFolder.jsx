@@ -24,7 +24,6 @@ export default function StackFolder({ children, stack }) {
           </>
         )}
       </h2>
-      {console.log(stack)}
     </div>
   )
 }

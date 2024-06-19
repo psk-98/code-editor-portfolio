@@ -10,8 +10,9 @@ export default function Side({ setToggle, toggle, pathname }) {
         {navList.map((item, i) => (
           <li
             key={i}
-            className={`${styles.sideItem} ${pathname == item || (pathname == "/" && item == "hello" && styles.active)}`}
+            className={`${styles.sideItem} ${(pathname == "/" && item == "hello") || (pathname == "/" + item && styles.active)}`}
           >
+            {}
             <Link
               href={item !== "hello" ? item : "/"}
               onClick={() => setToggle(false)}

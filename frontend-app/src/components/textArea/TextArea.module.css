@@ -4,6 +4,7 @@
 .header {
   font-size: var(--labels-text-size);
   margin: 0 0 2rem 0;
+  line-height: 140%;
 }
 .header span {
   color: var(--gray-color);
