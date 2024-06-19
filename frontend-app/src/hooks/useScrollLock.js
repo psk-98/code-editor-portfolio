@@ -2,7 +2,7 @@ export default function useScrollLock() {
   const lock = () => {
     document.body.style.overflowY = "hidden"
 
-    const container = document.querySelector(".container")
+    const container = document?.querySelector(".container")
     if (container) {
       container.style.height = "calc(100vh - 4rem)"
       container.style.overflowY = "hidden"
@@ -13,7 +13,7 @@ export default function useScrollLock() {
   const unlock = () => {
     document.body.style.overflowY = "scroll"
 
-    const container = document.querySelector(".container")
+    const container = document?.querySelector(".container")
     if (container) {
       container.style.height = "fit-content"
       container.style.overflowY = "scroll"
