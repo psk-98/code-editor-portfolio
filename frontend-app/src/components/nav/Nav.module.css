@@ -56,22 +56,24 @@
 }
 
 /* side bar  */
-div.open {
-  display: flex;
-}
+
 .sideBar {
-  display: none;
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  height: calc(100vh - 6vh - 4rem);
-  max-width: calc(100vw - 4rem);
+  height: 0;
+  overflow: hidden;
+  width: calc(100vw - 4rem);
+  max-width: calc(100vw - 30px);
   left: 2rem;
   right: 2rem;
   background: var(--light-background-color);
-  border-left: 1px solid var(--line-color);
+  /* border-left: 1px solid var(--line-color); */
+  /* border-bottom: 1px solid var(--line-color); */
+  border: 1px solid var(--line-color);
+  border-top: none;
   border-radius: 0 0 1rem 1rem;
-  z-index: 2;
+  z-index: 4;
 }
 
 .sideList {

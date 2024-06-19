@@ -1,28 +1,31 @@
+import { navLinkVariants, sidebarVariants } from "@/animations/nav"
+import { motion } from "framer-motion"
 import Link from "next/link"
 import styles from "./Nav.module.css"
 
 export default function Side({ setToggle, toggle, pathname }) {
   return (
-    <div
-      className={toggle ? `${styles.sideBar} ${styles.open}` : styles.sideBar}
+    <motion.ul
+      className={styles.sideBar}
+      initial={false}
+      animate={toggle ? "open" : "closed"}
+      variants={sidebarVariants}
     >
-      <ul className={styles.sideList}>
-        {navList.map((item, i) => (
-          <li
-            key={i}
-            className={`${styles.sideItem} ${(pathname == "/" && item == "hello") || (pathname == "/" + item && styles.active)}`}
+      {navList.map((item, i) => (
+        <motion.li
+          className={`${styles.sideItem} ${(pathname == "/" && item == "hello") || (pathname == "/" + item && styles.active)}`}
+          key={i}
+          variants={navLinkVariants}
+        >
+          <Link
+            href={item !== "hello" ? item : "/"}
+            onClick={() => setToggle(false)}
           >
-            {}
-            <Link
-              href={item !== "hello" ? item : "/"}
-              onClick={() => setToggle(false)}
-            >
-              {"_" + item}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+            {"_" + item}
+          </Link>
+        </motion.li>
+      ))}
+    </motion.ul>
   )
 }
 

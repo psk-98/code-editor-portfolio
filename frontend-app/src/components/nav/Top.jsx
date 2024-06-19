@@ -1,3 +1,5 @@
+import { line1Variants, line2Variants, line3Variants } from "@/animations/nav"
+import { motion } from "framer-motion"
 import Link from "next/link"
 import styles from "./Nav.module.css"
 
@@ -9,9 +11,21 @@ export default function TopNav({ toggle, setToggle, pathname }) {
           <Link href="/">paul-khoza</Link>
         </div>
         <div className={styles.burger} onClick={() => setToggle(!toggle)}>
-          <div className={styles.line1}></div>
-          <div className={styles.line2}></div>
-          <div className={styles.line3}></div>
+          <motion.div
+            className={styles.line1}
+            variants={line1Variants}
+            animate={toggle ? "open" : "closed"}
+          ></motion.div>
+          <motion.div
+            className={styles.line2}
+            variants={line2Variants}
+            animate={toggle ? "open" : "closed"}
+          ></motion.div>
+          <motion.div
+            className={styles.line3}
+            variants={line3Variants}
+            animate={toggle ? "open" : "closed"}
+          ></motion.div>
         </div>
         <div className={styles.navLinks}>
           <div
