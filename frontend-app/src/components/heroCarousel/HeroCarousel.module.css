@@ -1,5 +1,5 @@
 .wrapper {
-  min-height: (100vh - 10rem - 4rem - 6.5rem - 2px);
+  height: (100vh - 10rem - 4rem - 6.5rem - 2px);
   overflow: hidden;
 }
 
@@ -26,4 +26,11 @@
 
 .wrapper li pre {
   overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    height: var(--max-height-desktop-between-footer-nav);
+    max-height: var(--max-height-desktop-between-footer-nav);
+  }
 }

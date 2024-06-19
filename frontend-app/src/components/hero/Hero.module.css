@@ -1,5 +1,5 @@
 .heroSection {
-  min-height: calc(100vh - 4rem - 6vh - 6.25rem);
+  height: calc(100vh - 4rem - 6vh - 6.25rem);
   /* vh minus container padding minus mobile nav height */
   max-height: 100vh;
   display: flex;
@@ -7,7 +7,7 @@
 }
 
 .heroGreeting {
-  padding: 10rem 0 0 2rem;
+  padding: 0 0 0 2rem;
   font-size: var(--body-text-size);
 }
 .heroName {
@@ -40,6 +40,9 @@
 }
 .leftSide {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   z-index: 1;
 }
 .rightSide {
@@ -52,7 +55,6 @@
   right: 2rem;
   left: 2rem;
   position: absolute;
-  min-height: calc(100vh - 4rem - 6vh - 6.25rem);
   height: calc(100vh - 4rem - 6vh - 6.25rem);
   overflow: hidden;
   display: flex;
@@ -74,14 +76,14 @@
 
 @media (min-width: 1024px) {
   .heroSection {
-    min-height: calc(100vh - 10rem - 4rem - 6.5rem);
-    /* vh minus container margin minus nav padding */
+    height: var(--max-height-desktop-between-footer-nav);
+    max-height: var(--max-height-desktop-between-footer-nav);
     display: flex;
     align-items: center;
   }
   .heroBackground {
-    max-height: calc(100vh - 4rem - 6vh - 4rem - 6rem);
-    min-height: calc(100vh - 4rem - 6vh - 4rem - 6rem + 4px);
+    height: var(--max-height-desktop-between-footer-nav);
+    max-height: var(--max-height-desktop-between-footer-nav);
     width: calc(100vw - 10rem + 1px);
     left: 5rem;
     max-width: calc(100vw - 10rem + 1px);
