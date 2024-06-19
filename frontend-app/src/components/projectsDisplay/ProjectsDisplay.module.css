@@ -56,7 +56,8 @@
 @media (min-width: 1024px) {
   .wrapper {
     width: calc(78.78vw + 1rem);
-    max-height: calc(100vh - 10rem - 6rem);
+    height: var(--max-height-desktop-between-footer-nav);
+    max-height: var(--max-height-desktop-between-footer-nav);
     overflow: hidden;
     margin: 0 0 8rem 0;
   }
@@ -69,6 +70,7 @@
     align-items: center;
     line-height: normal;
     text-transform: capitalize;
+    font-weight: 300;
   }
 
   .headerDesktop a {

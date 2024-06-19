@@ -20,10 +20,14 @@
 .file {
   margin: 0 0 1rem 0;
   word-break: break-all;
+  cursor: pointer;
 }
 .file > * {
   color: var(--gray-color);
   font-size: var(--labels-text-size);
+}
+.file span {
+  font-weight: 300;
 }
 
 @media (min-width: 1024px) {

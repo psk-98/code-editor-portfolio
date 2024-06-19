@@ -68,13 +68,16 @@
 .checked .name {
   color: var(--white-color);
 }
+.name {
+  font-weight: 300;
+}
 
 @media (min-width: 1024px) {
   .folderWrapper {
     width: calc(16.19vw - 2rem);
     border-right: 1px solid var(--line-color);
-    min-height: calc(100vh - 10rem - 6rem);
-    max-height: 100vh;
+    height: var(--max-height-desktop-between-footer-nav);
+    max-height: var(--max-height-desktop-between-footer-nav);
   }
   .folderWrapper h2 {
     display: none;

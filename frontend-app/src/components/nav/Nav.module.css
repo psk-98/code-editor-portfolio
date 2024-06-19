@@ -73,6 +73,7 @@ div.open {
   border-radius: 0 0 1rem 1rem;
   z-index: 2;
 }
+
 .sideList {
   width: 100%;
 }
@@ -86,12 +87,14 @@ div.open {
 .sideItem a {
   color: var(--white-color);
   font-size: var(--labels-text-size);
+  font-weight: 300;
 }
 .sideList .active {
   background: var(--dark-background-color);
 }
 .sideList .active a {
   color: var(--gray-color);
+  font-weight: 400;
 }
 
 @media (min-width: 1024px) {

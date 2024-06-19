@@ -54,6 +54,7 @@
     width: fit-content;
     color: var(--gray-color);
     align-items: center;
+    font-weight: 300;
   }
 
   .headerDesktop button {

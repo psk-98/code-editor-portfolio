@@ -13,6 +13,7 @@
 .heroName {
   margin: 0 0 0 1rem;
   font-size: var(--headline-text-size);
+  font-weight: 300;
 }
 .heroSubtitle {
   margin: 0 0 0 2rem;
@@ -28,6 +29,9 @@
   font-size: var(--code-snippets-text-size);
   margin: 0 0 1rem 2rem;
   word-break: break-all;
+}
+.heroGit > * {
+  font-weight: 500;
 }
 .keyword {
   color: var(--purple-color);
