@@ -13,6 +13,10 @@
 .icon {
   padding: 0 1rem;
 }
+.active .fileName {
+  color: var(--white-color);
+  fill: var(--white-color);
+}
 .file {
   margin: 0 0 1rem 0;
   word-break: break-all;

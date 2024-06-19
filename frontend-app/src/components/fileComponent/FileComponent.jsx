@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 import {
   externalLinkIcon,
   fileArrow,
@@ -7,13 +6,18 @@ import {
 } from "../../../public/assests/svgs"
 import styles from "./FileComponent.module.css"
 
-export default function FileComponent({ data, folderName }) {
-  const pathname = usePathname()
-
+export default function FileComponent({ data, folderName, searchParams }) {
   return (
     <div className={styles.filesWrapper}>
       {data?.map((file, i) => (
-        <div className={styles.file} key={i}>
+        <div
+          className={
+            searchParams?.file == file.file
+              ? `${styles.file} ${styles.active}`
+              : styles.file
+          }
+          key={i}
+        >
           {folderName == "contacts" ? (
             <div>
               <span className={styles.arrow}>{fileArrow}</span>

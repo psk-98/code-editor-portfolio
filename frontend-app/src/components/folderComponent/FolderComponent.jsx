@@ -7,6 +7,7 @@ export default function FolderComponent({
   data,
   openFolder,
   setOpenFolder,
+  searchParams,
 }) {
   return (
     <>
@@ -29,7 +30,11 @@ export default function FolderComponent({
         <span className={styles.name}>{folderName}</span>
       </button>
       {folderName === openFolder && (
-        <FileComponent data={data} folderName={folderName} />
+        <FileComponent
+          data={data}
+          folderName={folderName}
+          searchParams={searchParams}
+        />
       )}
     </>
   )

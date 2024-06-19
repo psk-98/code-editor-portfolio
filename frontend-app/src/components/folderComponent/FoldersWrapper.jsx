@@ -5,7 +5,7 @@ import { useState } from "react"
 import FolderComponent from "./FolderComponent"
 import styles from "./FolderComponent.module.css"
 
-export default function FoldersWrapper({ data }) {
+export default function FoldersWrapper({ data, searchParams }) {
   const [openFolder, setOpenFolder] = useState("")
 
   return (
@@ -18,6 +18,7 @@ export default function FoldersWrapper({ data }) {
             openFolder={openFolder}
             setOpenFolder={setOpenFolder}
             key={i}
+            searchParams={searchParams}
           />
         ))}
       </div>
