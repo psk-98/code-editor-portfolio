@@ -56,7 +56,6 @@
 }
 
 /* side bar  */
-
 .sideBar {
   flex-direction: column;
   justify-content: space-between;
@@ -68,16 +67,10 @@
   left: 2rem;
   right: 2rem;
   background: var(--light-background-color);
-  /* border-left: 1px solid var(--line-color); */
-  /* border-bottom: 1px solid var(--line-color); */
   border: 1px solid var(--line-color);
   border-top: none;
   border-radius: 0 0 1rem 1rem;
   z-index: 4;
-}
-
-.sideList {
-  width: 100%;
 }
 .sideItem {
   border-bottom: 1px solid var(--line-color);
@@ -116,7 +109,6 @@
   .navLinks {
     display: flex;
   }
-
   .contactMe {
     display: block;
   }

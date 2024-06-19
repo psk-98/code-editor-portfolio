@@ -12,8 +12,6 @@ export default function TextArea({ data, searchParams, code, codeDetails }) {
       <div className={styles.textAreaWrapper}>
         {searchParams?.file && (
           <div className={styles.filesTab}>
-            {console.log(searchParams.file)}
-
             <h2 className={styles.headerDesktop}>
               {data[0]?.file} <button>{closeIcon}</button>
             </h2>
@@ -38,11 +36,13 @@ export default function TextArea({ data, searchParams, code, codeDetails }) {
         </div>
       </div>
       <div className={styles.codeSnippetWrapper}>
-        <div className={styles.filesTab}>
-          <div className={styles.headerDesktop}>
-            Code Snippet<button>{closeIcon}</button>
+        {searchParams?.file && (
+          <div className={styles.filesTab}>
+            <div className={styles.headerDesktop}>
+              Code Snippet<button>{closeIcon}</button>
+            </div>
           </div>
-        </div>
+        )}
         <h3 className={styles.codeSnippetHeader}>
           {`// Code snippet here showcase:`}
         </h3>
