@@ -30,7 +30,12 @@ export default function TextArea({ data, searchParams, code, codeDetails }) {
                 {line.children[0]?.text}
               </a>
             ) : (
-              <p key={line._key}>{line.children[0].text}</p>
+              <p
+                key={line._key}
+                className={line.children[0].text == "" && styles.space}
+              >
+                {line.children[0].text}
+              </p>
             )
           )}
         </div>

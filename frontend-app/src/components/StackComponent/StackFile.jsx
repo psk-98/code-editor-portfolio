@@ -1,4 +1,7 @@
-import Link from "next/link"
+"use client"
+
+import { fileVariants, filesWrapperVariants } from "@/animations/folders"
+import { useRouter } from "next/navigation"
 import {
   CSSIcon,
   HTMLIcon,
@@ -8,15 +11,24 @@ import {
   nextIcon,
   reactIcon,
 } from "../../../public/assests/svgs"
+import { MotionDiv } from "../motionComponents/MotionComponents"
 import styles from "./Stack.module.css"
 import StackFolder from "./StackFolder"
 
 export default function StackFile({ tags, searchParams }) {
+  const router = useRouter()
+
   return (
     <StackFolder stack={searchParams?.stack}>
-      <div className={styles.file}>
+      <MotionDiv
+        className={styles.file}
+        variants={filesWrapperVariants}
+        initial="closed"
+        animate="open"
+        exit="closed"
+      >
         {tags?.map((tag) => (
-          <Link
+          <MotionDiv
             href={`/projects?stack=${tag?.name}`}
             className={
               searchParams?.stack?.includes(tag?.name)
@@ -24,15 +36,17 @@ export default function StackFile({ tags, searchParams }) {
                 : undefined
             }
             key={tag?.id}
+            variants={fileVariants}
+            onClick={() => router.push(`/projects?stack=${tag?.name}`)}
           >
             <div className={styles.checkBox}>
               {searchParams?.stack?.includes(tag?.name) && checkedIcon}
             </div>
             <span className={styles.icon}>{returnStackIcon(tag?.name)}</span>
             <span className={styles.name}>{tag.name}</span>
-          </Link>
+          </MotionDiv>
         ))}
-      </div>
+      </MotionDiv>
     </StackFolder>
   )
 }

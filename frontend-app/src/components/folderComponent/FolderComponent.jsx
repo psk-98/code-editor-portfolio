@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion"
 import { folderArrow } from "../../../public/assests/svgs"
 import FileComponent from "../fileComponent/FileComponent"
 import styles from "./FolderComponent.module.css"
@@ -29,13 +30,15 @@ export default function FolderComponent({
         </span>
         <span className={styles.name}>{folderName}</span>
       </button>
-      {folderName === openFolder && (
-        <FileComponent
-          data={data}
-          folderName={folderName}
-          searchParams={searchParams}
-        />
-      )}
+      <AnimatePresence>
+        {folderName === openFolder && (
+          <FileComponent
+            data={data}
+            folderName={folderName}
+            searchParams={searchParams}
+          />
+        )}
+      </AnimatePresence>
     </>
   )
 }

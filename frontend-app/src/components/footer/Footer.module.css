@@ -53,6 +53,7 @@
 
 .socialIcon span {
   color: var(--gray-color);
+  margin: 0 1rem 0 0;
 }
 .socialIcon svg {
   height: 3rem;

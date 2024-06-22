@@ -37,11 +37,12 @@
 .file {
   padding: 2rem;
 }
-.file a {
+.file div {
   display: flex;
   font-size: var(--labels-text-size);
   color: var(--gray-color);
   text-transform: capitalize;
+  cursor: pointer;
 }
 
 .checkBox {
@@ -51,6 +52,7 @@
 }
 .checked .checkBox {
   background: var(--line-color);
+  transition: all 0.4s ease-in-out;
 }
 .file .icon {
   margin: 0;
@@ -58,15 +60,16 @@
 }
 .file .name {
   color: var(--gray-color);
+  transition: color 0.4s ease-in-out;
 }
 .file .icon svg {
   height: 3rem;
   width: auto;
   fill: var(--gray-color);
-  /* stroke: var(--gray-color); */
 }
 .checked .name {
   color: var(--white-color);
+  transition: color 0.4s ease-in-out;
 }
 .name {
   font-weight: 300;

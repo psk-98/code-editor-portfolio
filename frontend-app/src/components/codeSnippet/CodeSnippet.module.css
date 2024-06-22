@@ -60,14 +60,15 @@
 .codeWrapper pre {
   margin: 3rem 2rem;
 }
+.details,
+.stars {
+  display: none;
+}
 @media (min-width: 1024px) {
   .wrapper {
     margin: 4rem 4rem 0 4rem;
   }
-  .details,
-  .stars {
-    display: flex;
-  }
+
   .detail {
     margin: 0 2rem 0 0;
   }

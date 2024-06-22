@@ -15,6 +15,9 @@
   line-height: 150%;
   margin: 0 0 6rem 0;
 }
+.text .space {
+  margin: calc(var(--labels-text-size) * 1.5) 0 0 0;
+}
 .text a {
   color: var(--gray-color);
   text-decoration: underline;

@@ -29,6 +29,17 @@
 .file span {
   font-weight: 300;
 }
+.file svg {
+  height: 2rem;
+  width: auto;
+}
+.file .copied > * {
+  color: var(--line-color);
+  fill: var(--line-color);
+}
+.file button {
+  cursor: pointer;
+}
 
 @media (min-width: 1024px) {
   .file {

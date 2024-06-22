@@ -1,5 +1,6 @@
 "use client"
 
+import { AnimatePresence } from "framer-motion"
 import { useState } from "react"
 import { folderArrow } from "../../../public/assests/svgs"
 import styles from "./Stack.module.css"
@@ -16,7 +17,7 @@ export default function StackFolder({ children, stack }) {
         </span>
         <span className={styles.name}>projects</span>
       </button>
-      {isOpen ? children : <></>}
+      <AnimatePresence>{isOpen && children}</AnimatePresence>
       <h2>
         {stack && (
           <>
