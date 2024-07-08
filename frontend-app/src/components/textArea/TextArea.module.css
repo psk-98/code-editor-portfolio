@@ -47,7 +47,12 @@
     width: calc(100% - 8rem);
     padding: 4rem;
     font-size: var(--body-text-size);
+    max-height: calc(100vh - 10rem - 50.5px - 56px - 14.5rem);
+    overflow-x: scroll;
   }
+  /* .text::-webkit-scrollbar- {
+    width: 0rem;
+  } */
   .header {
     display: none;
   }

@@ -60,12 +60,12 @@ button {
 }
 
 ::-webkit-scrollbar {
-  width: 1rem;
+  /* width: 1rem; */
 }
 
 @media (min-width: 1024px) {
   body {
-    overflow: hidden !important;
+    /* overflow: hidden !important; */
   }
   .container {
     width: calc(100vw - 10rem);

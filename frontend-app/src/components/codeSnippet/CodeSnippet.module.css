@@ -67,6 +67,8 @@
 @media (min-width: 1024px) {
   .wrapper {
     margin: 4rem 4rem 0 4rem;
+    overflow-x: scroll;
+    max-height: calc(100vh - 10rem - 50.5px - 56px - 16rem);
   }
 
   .detail {
