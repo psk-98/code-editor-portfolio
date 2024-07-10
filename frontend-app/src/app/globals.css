@@ -54,13 +54,14 @@ button {
   font-size: var(--code-snippets-text-size);
 }
 .aboutWrapper,
+.contactWrapper,
 .projectsWrapper,
 .thanksWrapper {
   min-height: calc(100vh - 4rem - 6.25rem - 7.75rem - 6vh);
 }
 
 ::-webkit-scrollbar {
-  /* width: 1rem; */
+  width: 0;
 }
 
 @media (min-width: 1024px) {
