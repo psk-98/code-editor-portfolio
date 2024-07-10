@@ -66,7 +66,7 @@
     font-weight: 300;
   }
 
-  .headerDesktop button {
+  .headerDesktop a {
     padding: 0 0 0 5rem;
     color: var(--gray-color);
     background: none;
@@ -74,8 +74,11 @@
     width: fit-content;
     cursor: pointer;
   }
-  .headerDesktop button:hover {
-    color: var(--white-color);
+  .headerDesktop a path {
+    transition: fill 0.4s ease;
+  }
+  .headerDesktop a:hover path {
+    fill: var(--white-color);
   }
   .filesTab {
     display: block;
@@ -85,6 +88,8 @@
   .codeSnippetWrapper .filesTab div {
     opacity: 0;
     cursor: default;
+    font-size: var(--labels-text-size);
+    line-height: 100%;
   }
   .codeSnippetWrapper .filesTab button {
     cursor: default;

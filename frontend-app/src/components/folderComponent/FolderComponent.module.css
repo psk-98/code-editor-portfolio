@@ -15,6 +15,7 @@
   text-align: left;
   padding: 1rem 0 1rem 2rem;
   font-family: var(--my-font);
+  cursor: pointer;
 }
 
 .icon svg {

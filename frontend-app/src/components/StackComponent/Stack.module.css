@@ -17,6 +17,7 @@
   text-align: left;
   padding: 1rem 0 1rem 2rem;
   font-family: var(--my-font);
+  cursor: pointer;
 }
 
 .icon svg {
@@ -24,7 +25,7 @@
   width: auto;
   margin: 0 1rem 0 0;
   fill: var(--white-color);
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease;
 }
 .openIcon svg {
   transform: rotate(90deg);
@@ -34,10 +35,10 @@
   font-size: var(--labels-text-size);
 }
 
-.file {
+.files {
   padding: 2rem;
 }
-.file div {
+.files .file {
   display: flex;
   font-size: var(--labels-text-size);
   color: var(--gray-color);
@@ -45,31 +46,34 @@
   cursor: pointer;
 }
 
+.file:hover span {
+  color: var(--white-color);
+}
+
 .checkBox {
   border: 1px solid var(--line-color);
   height: 2.375rem;
   width: 2.375rem;
+  transition: all 0.4 ease;
 }
-.checked .checkBox {
-  background: var(--line-color);
-  transition: all 0.4s ease-in-out;
-}
-.file .icon {
+
+.files .icon {
   margin: 0;
   padding: 0 1rem 0 3rem;
 }
-.file .name {
+.files .name {
   color: var(--gray-color);
-  transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease;
 }
-.file .icon svg {
+.files .icon svg {
   height: 3rem;
   width: auto;
   fill: var(--gray-color);
 }
+
 .checked .name {
   color: var(--white-color);
-  transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease;
 }
 .name {
   font-weight: 300;

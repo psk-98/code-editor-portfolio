@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { closeIcon } from "../../../public/assests/svgs"
 import CodeSnippet from "../codeSnippet/CodeSnippet"
 import styles from "./TextArea.module.css"
@@ -13,7 +14,7 @@ export default function TextArea({ data, searchParams, code, codeDetails }) {
         {searchParams?.file && (
           <div className={styles.filesTab}>
             <h2 className={styles.headerDesktop}>
-              {data[0]?.file} <button>{closeIcon}</button>
+              {data[0]?.file} <Link href="/about-me">{closeIcon}</Link>
             </h2>
           </div>
         )}
@@ -44,7 +45,7 @@ export default function TextArea({ data, searchParams, code, codeDetails }) {
         {searchParams?.file && (
           <div className={styles.filesTab}>
             <div className={styles.headerDesktop}>
-              Code Snippet<button>{closeIcon}</button>
+              Code Snippet<div>{closeIcon}</div>
             </div>
           </div>
         )}

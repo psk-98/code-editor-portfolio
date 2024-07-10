@@ -11,20 +11,38 @@ export default function Side({ setToggle, toggle, pathname }) {
       animate={toggle ? "open" : "closed"}
       variants={sidebarVariants}
     >
-      {navList.map((item, i) => (
-        <motion.li
-          className={`${styles.sideItem} ${(pathname == "/" && item == "hello") || (pathname == "/" + item && styles.active)}`}
-          key={i}
-          variants={navLinkVariants}
-        >
-          <Link
-            href={item !== "hello" ? item : "/"}
-            onClick={() => setToggle(false)}
-          >
-            {"_" + item}
-          </Link>
-        </motion.li>
-      ))}
+      <motion.li
+        className={`${styles.sideItem} ${pathname == "/" && styles.active}`}
+        variants={navLinkVariants}
+      >
+        <Link href="/" onClick={() => setToggle(false)}>
+          _hello
+        </Link>
+      </motion.li>
+      <motion.li
+        className={`${styles.sideItem} ${pathname == "/about-me" && styles.active}`}
+        variants={navLinkVariants}
+      >
+        <Link href="/about-me" onClick={() => setToggle(false)}>
+          _about-me
+        </Link>
+      </motion.li>
+      <motion.li
+        className={`${styles.sideItem} ${pathname == "/projects" && styles.active}`}
+        variants={navLinkVariants}
+      >
+        <Link href="/projects" onClick={() => setToggle(false)}>
+          _projects
+        </Link>
+      </motion.li>
+      <motion.li
+        className={`${styles.sideItem} ${pathname == "/contact-me" && styles.active}`}
+        variants={navLinkVariants}
+      >
+        <Link href="/contact-me" onClick={() => setToggle(false)}>
+          _contact-me
+        </Link>
+      </motion.li>
     </motion.ul>
   )
 }

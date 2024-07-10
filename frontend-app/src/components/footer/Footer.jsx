@@ -7,7 +7,12 @@ export default function Footer() {
       <div className={styles.leftSide}>
         <div className={styles.findMe}>find me on:</div>
         <div className={styles.socialIcon}>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Email Paul khoza"
+          >
             {emailIcon}
           </a>
         </div>
@@ -16,6 +21,7 @@ export default function Footer() {
             href="https://github.com/psk-98"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit Paul Khoza's github"
           >
             {githubIcon}
           </a>
@@ -27,6 +33,7 @@ export default function Footer() {
             href="https://github.com/psk-98"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit Paul Khoza's github"
           >
             <span>@psk-98</span> {githubIcon}
           </a>

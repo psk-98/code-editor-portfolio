@@ -21,7 +21,7 @@ export default function StackFile({ tags, searchParams }) {
   return (
     <StackFolder stack={searchParams?.stack}>
       <MotionDiv
-        className={styles.file}
+        className={styles.files}
         variants={filesWrapperVariants}
         initial="closed"
         animate="open"
@@ -29,11 +29,11 @@ export default function StackFile({ tags, searchParams }) {
       >
         {tags?.map((tag) => (
           <MotionDiv
-            href={`/projects?stack=${tag?.name}`}
+            // href={`/projects?stack=${tag?.name}`}
             className={
               searchParams?.stack?.includes(tag?.name)
-                ? styles.checked
-                : undefined
+                ? styles.checked + " " + styles.file
+                : styles.file
             }
             key={tag?.id}
             variants={fileVariants}

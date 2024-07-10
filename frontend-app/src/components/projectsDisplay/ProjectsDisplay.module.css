@@ -81,8 +81,11 @@
     width: fit-content;
     cursor: pointer;
   }
-  .headerDesktop a:hover {
-    color: var(--white-color);
+  .headerDesktop a path {
+    transition: fill 0.4s ease;
+  }
+  .headerDesktop a:hover path {
+    fill: var(--white-color);
   }
   .filesTab {
     display: block;

@@ -7,6 +7,7 @@
 }
 .nav a {
   color: var(--gray-color);
+  transition: color 0.4s ease;
 }
 .nav a:hover {
   color: var(--white-color);
@@ -75,6 +76,7 @@
 .sideItem {
   border-bottom: 1px solid var(--line-color);
   padding: 2rem;
+  transition: background 0.4s ease;
 }
 .sideItem:hover {
   background: var(--dark-background-color);
@@ -83,9 +85,6 @@
   color: var(--white-color);
   font-size: var(--labels-text-size);
   font-weight: 300;
-}
-.sideBar .active {
-  background: var(--dark-background-color);
 }
 .sideBar .active a {
   color: var(--gray-color);

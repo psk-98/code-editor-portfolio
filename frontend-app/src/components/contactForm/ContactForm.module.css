@@ -14,13 +14,13 @@
   font-size: var(--labels-text-size);
   color: var(--gray-color);
   padding: 1rem;
-  /* background: var(--menu-background-color); */
   background: #011221;
   border: 1px solid var(--line-color);
   border-radius: 1rem;
   resize: none;
   margin: 1rem 0 0 0;
   font-family: var(--my-font);
+  transition: border 0.2s ease;
 }
 .formGroup input:focus,
 .formGroup textarea:focus {
@@ -37,8 +37,16 @@
   border-radius: 1rem;
   padding: 1rem 2rem;
   background: var(--line-color);
-  border: none;
+  border: 1px solid var(--line-color);
   cursor: pointer;
+  transition:
+    border 0.4s ease,
+    background-color 1s ease;
+}
+
+.formGroup button:hover {
+  border: 1px solid var(--white-color);
+  background: var(--light-background-color);
 }
 
 @media (min-width: 1024px) {
@@ -49,7 +57,6 @@
   }
   .contactFormWrapper {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     border-right: 1px solid var(--line-color);
   }

@@ -54,15 +54,22 @@
 .socialIcon span {
   color: var(--gray-color);
   margin: 0 1rem 0 0;
+  transition: color 0.4s ease;
 }
 .socialIcon svg {
   height: 3rem;
   fill: var(--gray-color);
   stroke: var(--gray-color);
 }
-
-.socialIcon:hover .socialIcon span {
+.socialIcon path {
+  transition: fill 0.4s ease;
+}
+.socialIcon:hover span {
   color: var(--white-color);
+}
+.socialIcon:hover path {
+  fill: var(--white-color);
+  stroke: var(--white-color);
 }
 
 @media (min-width: 1024px) {
