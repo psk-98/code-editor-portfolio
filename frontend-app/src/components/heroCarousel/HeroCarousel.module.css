@@ -29,6 +29,11 @@
   overflow-y: scroll;
 }
 
+.wrapper li pre,
+.wrapper li code,
+.wrapper li code span {
+  font-size: var(--code-snippets-text-size);
+}
 @media (min-width: 1024px) {
   .wrapper {
     height: var(--max-height-desktop-between-footer-nav);
