@@ -27,12 +27,17 @@ export default function ContactForm() {
     }))
   }
 
+  const handleReset = () => {
+    setInputs({ name: "", email: "", message: "" })
+    reset()
+  }
+
   return (
     <>
       {/* {console.log(process.env.FORMSPREE_ID)} */}
       <div className={styles.contactFormWrapper}>
         {state.succeeded ? (
-          <ThankYouText reset={reset} />
+          <ThankYouText handleReset={handleReset} />
         ) : (
           <form className={styles.contactForm} onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
