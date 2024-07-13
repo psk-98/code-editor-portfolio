@@ -1,4 +1,4 @@
-## Welcome to My [Portfolio Website]([https://paul-khoza.vercel.app/])
+## Welcome to My [Portfolio Website](https://paul-khoza.vercel.app/)
 
 This website is built using [Next.js](https://nextjs.org/), a framework for building server-rendered React applications. It also utilizes [Framer Motion](https://www.framer.com/motion/) for animations, and Prettier and ESLint for code formatting.
 
