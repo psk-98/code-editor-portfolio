@@ -24,12 +24,5 @@ Welcome to my portfolio website! This project showcases my work and skills, buil
 - **Next MDX**: Allows for using JSX in markdown files, enhancing content flexibility.
 - **Sanity**: Headless CMS for managing portfolio content seamlessly.
 
-## Installation
-
-To set up the project locally, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/username/portfolio-website.git
 
 
