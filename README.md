@@ -1,14 +1,35 @@
-## Welcome to My [Portfolio Website](https://paul-khoza.vercel.app/)
 
-This website is built using [Next.js](https://nextjs.org/), a framework for building server-rendered React applications. It also utilizes [Framer Motion](https://www.framer.com/motion/) for animations, and Prettier and ESLint for code formatting.
 
-To get started, make sure you have Node.js installed on your machine. Then, clone the repository and run npm install to install all of the dependencies.
 
-To start a development server, run npm run dev. This will start the server on [http://localhost:3000](http://localhost:3000) and will automatically reload the page when changes are made.
+## [My Portfolio Website](https://paul-khoza.netlify.app/)
 
-To build the application for production, run npm run build and then npm run start.
+Welcome to my portfolio website! This project showcases my work and skills, built using modern technologies like [**Next.js**](https://nextjs.org/), [**Prism.js**](https://prismjs.com), [**Next MDX**](https://nextjs.org/docs/pages/building-your-application/configuring/mdx), and [**Sanity**](https://www.sanity.io/) as the CMS.
 
-Please check package.json for more scripts and details
+## Table of Contents
 
-Thank you for visiting my portfolio website. I hope you enjoy browsing through my work!
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+
+## Features
+
+- Responsive design for optimal viewing on all devices.
+- Code highlighting using Prism.js for a polished look.
+- Dynamic content rendering with Next MDX for markdown support.
+- Easy content management through Sanity's headless CMS.
+
+## Tech Stack
+
+- **Next.js**: React framework for server-side rendering and static site generation.
+- **Prism.js**: Syntax highlighter for displaying code snippets beautifully.
+- **Next MDX**: Allows for using JSX in markdown files, enhancing content flexibility.
+- **Sanity**: Headless CMS for managing portfolio content seamlessly.
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/username/portfolio-website.git
+
 
