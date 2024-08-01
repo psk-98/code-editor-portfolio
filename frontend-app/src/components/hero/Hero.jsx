@@ -14,7 +14,11 @@ export default function Hero() {
         <p className={styles.heroGit}>
           <span className={styles.keyword}>const</span>
           <span className={styles.variableName}>{" githubLink "}</span>={" "}
-          <a href="https://github.com/psk-98">
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://github.com/psk-98"
+          >
             &quot;https://github.com/psk-98&quot;
           </a>
         </p>
