@@ -29,7 +29,6 @@ export default function StackFile({ tags, searchParams }) {
       >
         {tags?.map((tag) => (
           <MotionDiv
-            // href={`/projects?stack=${tag?.name}`}
             className={
               searchParams?.stack?.includes(tag?.name)
                 ? styles.checked + " " + styles.file

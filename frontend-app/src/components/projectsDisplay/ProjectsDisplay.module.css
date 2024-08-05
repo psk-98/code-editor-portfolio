@@ -55,7 +55,7 @@
 
 @media (min-width: 1024px) {
   .wrapper {
-    width: calc(78.78vw + 1rem);
+    width: calc(83.81 + 1rem);
     height: var(--max-height-desktop-between-footer-nav);
     max-height: var(--max-height-desktop-between-footer-nav);
     overflow: hidden;
