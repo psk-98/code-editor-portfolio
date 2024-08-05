@@ -15,7 +15,7 @@ export default function StackFolder({ children, stack }) {
         >
           {folderArrow}
         </span>
-        <span className={styles.name}>projects</span>
+        <span className={styles.name}>filter</span>
       </button>
       <AnimatePresence>{isOpen && children}</AnimatePresence>
       <h2>
