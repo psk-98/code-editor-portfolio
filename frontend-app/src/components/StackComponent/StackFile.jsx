@@ -8,6 +8,7 @@ import {
   SanityIcon,
   checkedIcon,
   djangoIcon,
+  dotNetIcon,
   nextIcon,
   reactIcon,
 } from "../../../public/assests/svgs"
@@ -34,7 +35,7 @@ export default function StackFile({ tags, searchParams }) {
                 ? styles.checked + " " + styles.file
                 : styles.file
             }
-            key={tag?.id}
+            key={tag.id}
             variants={fileVariants}
             onClick={() => router.push(`/projects?stack=${tag?.name}`)}
           >
@@ -64,5 +65,7 @@ const returnStackIcon = (stackName) => {
       return HTMLIcon
     case "css":
       return CSSIcon
+    case ".net":
+      return dotNetIcon
   }
 }

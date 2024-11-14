@@ -34,7 +34,6 @@ export default function ContactForm() {
 
   return (
     <>
-      {/* {console.log(process.env.FORMSPREE_ID)} */}
       <div className={styles.contactFormWrapper}>
         {state.succeeded ? (
           <ThankYouText handleReset={handleReset} />
