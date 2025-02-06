@@ -8,7 +8,6 @@ import {
   SanityIcon,
   checkedIcon,
   djangoIcon,
-  dotNetIcon,
   nextIcon,
   reactIcon,
 } from "../../../public/assests/svgs"
@@ -65,11 +64,5 @@ const returnStackIcon = (stackName) => {
       return HTMLIcon
     case "css":
       return CSSIcon
-    case ".net":
-      return dotNetIcon
-<<<<<<< HEAD
-=======
-    //remeber to write the case in lower case letters
->>>>>>> 42e8b1b (update footer email)
   }
 }
