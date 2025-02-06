@@ -67,5 +67,9 @@ const returnStackIcon = (stackName) => {
       return CSSIcon
     case ".net":
       return dotNetIcon
+<<<<<<< HEAD
+=======
+    //remeber to write the case in lower case letters
+>>>>>>> 42e8b1b (update footer email)
   }
 }

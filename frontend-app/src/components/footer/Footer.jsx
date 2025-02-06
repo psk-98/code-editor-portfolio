@@ -8,7 +8,7 @@ export default function Footer() {
         <div className={styles.findMe}>find me on:</div>
         <div className={styles.socialIcon}>
           <a
-            href="#"
+            href="mailto:applications.secluding300@slmails.com"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Email Paul khoza"
