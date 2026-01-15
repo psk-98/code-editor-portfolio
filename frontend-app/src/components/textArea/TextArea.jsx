@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { closeIcon } from "../../../public/assests/svgs"
-import CodeSnippet from "../codeSnippet/CodeSnippet"
-import styles from "./TextArea.module.css"
+import Link from 'next/link'
+import { closeIcon } from '../../../public/assests/svgs'
+import CodeSnippet from '../codeSnippet/CodeSnippet'
+import styles from './TextArea.module.css'
 
 export default function TextArea({ data, searchParams, code, codeDetails }) {
   return (
@@ -19,10 +19,10 @@ export default function TextArea({ data, searchParams, code, codeDetails }) {
           </div>
         )}
         <div className={styles.text}>
-          {data[0]?.content.map((line) =>
+          {data[0]?.content.map(line =>
             line?.listItem ? (
               <li key={line?._key}>* {line.children[0]?.text}</li>
-            ) : line?.markDefs[0]?._type == "link" ? (
+            ) : line?.markDefs[0]?._type == 'link' ? (
               <a
                 href={line?.markDefs[0]?.href}
                 target="_blank"
@@ -33,11 +33,11 @@ export default function TextArea({ data, searchParams, code, codeDetails }) {
             ) : (
               <p
                 key={line._key}
-                className={line.children[0].text == "" && styles.space}
+                className={line.children[0].text == '' && styles.space}
               >
                 {line.children[0].text}
               </p>
-            )
+            ),
           )}
         </div>
       </div>
@@ -52,7 +52,10 @@ export default function TextArea({ data, searchParams, code, codeDetails }) {
         <h3 className={styles.codeSnippetHeader}>
           {`// Code snippet here showcase:`}
         </h3>
-        <CodeSnippet code={code} codeDetails={codeDetails} />
+        <CodeSnippet
+          code={code}
+          codeDetails={codeDetails}
+        />
       </div>
     </div>
   )

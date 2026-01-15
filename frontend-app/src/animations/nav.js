@@ -4,7 +4,7 @@ export const line1Variants = {
     translateX: -9,
     translateY: 7,
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 50,
       restDelta: 2,
     },
@@ -15,7 +15,7 @@ export const line1Variants = {
     translateY: 0,
     transition: {
       //delay: 0.5,
-      type: "spring",
+      type: 'spring',
       stiffness: 400,
       damping: 40,
     },
@@ -38,7 +38,7 @@ export const line3Variants = {
     translateX: -9,
     translateY: -7,
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 50,
       restDelta: 2,
     },
@@ -49,7 +49,7 @@ export const line3Variants = {
     translateY: 0,
     transition: {
       //delay: 0.5,
-      type: "spring",
+      type: 'spring',
       stiffness: 400,
       damping: 40,
     },
@@ -58,9 +58,9 @@ export const line3Variants = {
 
 export const sidebarVariants = {
   open: {
-    height: "calc(100vh - 4rem - 6vh - 1px)",
+    height: 'calc(100vh - 4rem - 6vh - 1px)',
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 50,
       restDelta: 2,
       staggerChildren: 0.1,
@@ -70,14 +70,14 @@ export const sidebarVariants = {
   closed: {
     height: 0,
     // top: 0,
-    borderBottom: "none",
+    borderBottom: 'none',
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 400,
       damping: 40,
       staggerChildren: 0.1,
       staggerDirection: -1,
-      when: "afterChildren",
+      when: 'afterChildren',
     },
   },
 }
@@ -85,14 +85,14 @@ export const navLinkVariants = {
   open: {
     opacity: 1,
     transition: {
-      type: "linear",
+      type: 'linear',
       y: { stiffness: 1000, velocity: -100 },
     },
   },
   closed: {
     opacity: 0,
     transition: {
-      type: "linear",
+      type: 'linear',
       y: { stiffness: 1000 },
     },
   },
@@ -101,13 +101,13 @@ export const navVariants = {
   hidden: {
     y: -100,
     transition: {
-      type: "spring",
+      type: 'spring',
     },
   },
   visible: {
     y: 0,
     transition: {
-      type: "spring",
+      type: 'spring',
     },
   },
 }

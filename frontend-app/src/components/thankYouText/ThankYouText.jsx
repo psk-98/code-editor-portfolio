@@ -1,4 +1,4 @@
-import styles from "./ThankYouText.module.css"
+import styles from './ThankYouText.module.css'
 
 export default function ThankYouText({ handleReset }) {
   return (

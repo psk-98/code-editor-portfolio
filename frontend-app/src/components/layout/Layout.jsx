@@ -1,18 +1,18 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import { Fira_Code } from "next/font/google"
-import { usePathname } from "next/navigation"
-import Prism from "prismjs"
-import { useEffect } from "react"
-import Footer from "../footer/Footer"
+import { motion } from 'framer-motion'
+import { Fira_Code } from 'next/font/google'
+import { usePathname } from 'next/navigation'
+import Prism from 'prismjs'
+import { useEffect } from 'react'
+import Footer from '../footer/Footer'
 
-import Nav from "../nav/Nav"
+import Nav from '../nav/Nav'
 
 const fira_code = Fira_Code({
-  display: "swap",
-  subsets: ["latin"],
-  variable: "--my-font",
+  display: 'swap',
+  subsets: ['latin'],
+  variable: '--my-font',
 })
 
 export default function Layout({ children }) {
@@ -28,10 +28,10 @@ export default function Layout({ children }) {
         className="container"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ ease: "easeInOut", duration: 0.75 }}
+        transition={{ ease: 'easeInOut', duration: 0.75 }}
       >
         <Nav />
-        {pathname !== "/" && (
+        {pathname !== '/' && (
           <h1 className="currentPage">_{pathname.slice(1)}</h1>
         )}
         {children}
