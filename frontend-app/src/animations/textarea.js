@@ -10,7 +10,7 @@ export const textAreaWrapperVaraints = {
       staggerChildren: 0.1,
       //   delayChildren: 0.4,
       staggerDirection: -1,
-      when: "afterChildren",
+      when: 'afterChildren',
     },
   },
 }
@@ -18,17 +18,17 @@ export const textAreaWrapperVaraints = {
 export const textAreaWrapperChildrenVaraints = {
   open: {
     opacity: 1,
-    display: "block",
+    display: 'block',
     transition: {
-      type: "linear",
+      type: 'linear',
       y: { stiffness: 1000, velocity: -100 },
     },
   },
   closed: {
     opacity: 0,
-    display: "none",
+    display: 'none',
     transition: {
-      type: "linear",
+      type: 'linear',
       y: { stiffness: 1000 },
     },
   },

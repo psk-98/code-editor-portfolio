@@ -1,7 +1,7 @@
-import FoldersWrapper from "@/components/folderComponent/FoldersWrapper"
-import TextArea from "@/components/textArea/TextArea"
-import { sanityClient } from "@/utils/configSanity"
-import { filterByFile } from "@/utils/filterByFile"
+import FoldersWrapper from '@/components/folderComponent/FoldersWrapper'
+import TextArea from '@/components/textArea/TextArea'
+import { sanityClient } from '@/utils/configSanity'
+import { filterByFile } from '@/utils/filterByFile'
 
 export default async function About({ searchParams }) {
   const data = await getData()
@@ -9,7 +9,10 @@ export default async function About({ searchParams }) {
 
   return (
     <div className="aboutWrapper">
-      <FoldersWrapper data={data} searchParams={searchParams} />
+      <FoldersWrapper
+        data={data}
+        searchParams={searchParams}
+      />
       <TextArea
         data={filterByFile(data, searchParams?.file)}
         searchParams={searchParams}
@@ -21,7 +24,7 @@ export default async function About({ searchParams }) {
 }
 
 const codeDetails =
-  "This is used to show the drop downs for personal-info, contacts etc..."
+  'This is used to show the drop downs for personal-info, contacts etc...'
 
 async function getData() {
   const query = `*[_type == 'aboutMe'] {
@@ -39,7 +42,7 @@ async function getCode() {
 }
 
 export const metadata = {
-  title: "About Me | Website Software Developer, Frontend, Backend",
+  title: 'About Me | Website Software Developer, Frontend, Backend',
   description:
-    "Paul Khoza is a proficient software developer specializing in creating websites. Discover more about his contributions to the development of software for the web.",
+    'Paul Khoza is a proficient software developer specializing in creating websites. Discover more about his contributions to the development of software for the web.',
 }

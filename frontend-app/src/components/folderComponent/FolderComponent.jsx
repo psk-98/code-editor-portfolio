@@ -1,7 +1,7 @@
-import { AnimatePresence } from "framer-motion"
-import { folderArrow } from "../../../public/assests/svgs"
-import FileComponent from "../fileComponent/FileComponent"
-import styles from "./FolderComponent.module.css"
+import { AnimatePresence } from 'framer-motion'
+import { folderArrow } from '../../../public/assests/svgs'
+import FileComponent from '../fileComponent/FileComponent'
+import styles from './FolderComponent.module.css'
 
 export default function FolderComponent({
   folderName,
@@ -16,7 +16,7 @@ export default function FolderComponent({
         className={styles.folder}
         key={data[0]?._id}
         onClick={() =>
-          setOpenFolder(folderName == openFolder ? "" : folderName)
+          setOpenFolder(folderName == openFolder ? '' : folderName)
         }
       >
         <span

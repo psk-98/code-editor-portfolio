@@ -32,6 +32,7 @@
     "sharp": "^0.33.4"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.3.11",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "eslint-config-prettier": "^9.1.0",

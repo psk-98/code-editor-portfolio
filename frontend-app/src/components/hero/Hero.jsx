@@ -1,6 +1,6 @@
-import HeroCarousel from "../heroCarousel/HeroCarousel"
-import styles from "./Hero.module.css"
-import HeroBackground from "./HeroBackground"
+import HeroCarousel from '../heroCarousel/HeroCarousel'
+import styles from './Hero.module.css'
+import HeroBackground from './HeroBackground'
 
 export default function Hero() {
   return (
@@ -9,11 +9,11 @@ export default function Hero() {
       <div className={styles.leftSide}>
         <p className={styles.heroGreeting}>Hi. I am</p>
         <h1 className={styles.heroName}>Paul Khoza</h1>
-        <p className={styles.heroSubtitle}>{"> Developer"}</p>
+        <p className={styles.heroSubtitle}>{'> Developer'}</p>
         <p className={styles.heroGray}>{`// find my profile on Github:`}</p>
         <p className={styles.heroGit}>
           <span className={styles.keyword}>const</span>
-          <span className={styles.variableName}>{" githubLink "}</span>={" "}
+          <span className={styles.variableName}>{' githubLink '}</span>={' '}
           <a
             target="_blank"
             rel="noreferrer noopener"

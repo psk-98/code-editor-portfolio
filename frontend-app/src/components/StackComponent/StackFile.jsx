@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { fileVariants, filesWrapperVariants } from "@/animations/folders"
-import { useRouter } from "next/navigation"
+import { fileVariants, filesWrapperVariants } from '@/animations/folders'
+import { useRouter } from 'next/navigation'
 import {
   CSSIcon,
   HTMLIcon,
@@ -10,10 +10,10 @@ import {
   djangoIcon,
   nextIcon,
   reactIcon,
-} from "../../../public/assests/svgs"
-import { MotionDiv } from "../motionComponents/MotionComponents"
-import styles from "./Stack.module.css"
-import StackFolder from "./StackFolder"
+} from '../../../public/assests/svgs'
+import { MotionDiv } from '../motionComponents/MotionComponents'
+import styles from './Stack.module.css'
+import StackFolder from './StackFolder'
 
 export default function StackFile({ tags, searchParams }) {
   const router = useRouter()
@@ -27,11 +27,11 @@ export default function StackFile({ tags, searchParams }) {
         animate="open"
         exit="closed"
       >
-        {tags?.map((tag) => (
+        {tags?.map(tag => (
           <MotionDiv
             className={
               searchParams?.stack?.includes(tag?.name)
-                ? styles.checked + " " + styles.file
+                ? styles.checked + ' ' + styles.file
                 : styles.file
             }
             key={tag.id}
@@ -50,19 +50,19 @@ export default function StackFile({ tags, searchParams }) {
   )
 }
 
-const returnStackIcon = (stackName) => {
+const returnStackIcon = stackName => {
   switch (stackName.toLowerCase()) {
-    case "react":
+    case 'react':
       return reactIcon
-    case "django":
+    case 'django':
       return djangoIcon
-    case "nextjs":
+    case 'nextjs':
       return nextIcon
-    case "sanity":
+    case 'sanity':
       return SanityIcon
-    case "html":
+    case 'html':
       return HTMLIcon
-    case "css":
+    case 'css':
       return CSSIcon
   }
 }

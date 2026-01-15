@@ -1,6 +1,6 @@
-import ContactForm from "@/components/contactForm/ContactForm"
-import FoldersWrapper from "@/components/folderComponent/FoldersWrapper"
-import { sanityClient } from "@/utils/configSanity"
+import ContactForm from '@/components/contactForm/ContactForm'
+import FoldersWrapper from '@/components/folderComponent/FoldersWrapper'
+import { sanityClient } from '@/utils/configSanity'
 
 export default async function Contact() {
   const data = await getData()
@@ -22,7 +22,7 @@ async function getData() {
 }
 
 export const metadata = {
-  title: "Contact Me | Website Software Developer, Frontend, Backend",
+  title: 'Contact Me | Website Software Developer, Frontend, Backend',
   description:
-    "Paul Khoza is a proficient software developer specializing in creating websites. Discover more about his contributions to the development of software for the web.",
+    'Paul Khoza is a proficient software developer specializing in creating websites. Discover more about his contributions to the development of software for the web.',
 }
