@@ -19,9 +19,8 @@ export default function ContactForm() {
 
   // const [isSuccess, setSuccess] = useState(false)
 
-  const handleChange = (event) => {
-    event.preventDefault()
-    setInputs((prev) => ({
+  const handleChange = event => {
+    setInputs(prev => ({
       ...prev,
       [event.target.id]: event.target.value,
     }))
