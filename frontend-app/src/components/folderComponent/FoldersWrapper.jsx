@@ -1,12 +1,12 @@
-"use client"
+'use client'
 
-import { sortByFolder } from "@/utils/sortByFolder"
-import { useState } from "react"
-import FolderComponent from "./FolderComponent"
-import styles from "./FolderComponent.module.css"
+import { sortByFolder } from '@/utils/sortByFolder'
+import { useState } from 'react'
+import FolderComponent from './FolderComponent'
+import styles from './FolderComponent.module.css'
 
 export default function FoldersWrapper({ data, searchParams }) {
-  const [openFolder, setOpenFolder] = useState("")
+  const [openFolder, setOpenFolder] = useState('')
 
   return (
     <div className={styles.wrapper}>
@@ -26,11 +26,11 @@ export default function FoldersWrapper({ data, searchParams }) {
   )
 }
 
-const folderNames = ["personal-info", "professional-info", "contacts"]
+const folderNames = ['personal-info', 'professional-info', 'contacts']
 
-const returnFolderName = (data) => {
+const returnFolderName = data => {
   let folders = []
-  data.forEach((item) => {
+  data.forEach(item => {
     if (!folders.includes(item.folder)) {
       folders.push(item.folder)
     }

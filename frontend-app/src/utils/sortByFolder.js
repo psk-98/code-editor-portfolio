@@ -1,5 +1,5 @@
 export const sortByFolder = (data, folderName) => {
-  const folderData = data?.filter((dataItem) => {
+  const folderData = data?.filter(dataItem => {
     return dataItem?.folder == folderName
   })
 

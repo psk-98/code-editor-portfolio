@@ -1,5 +1,5 @@
-import { emailIcon, githubIcon } from "../../../public/assests/svgs"
-import styles from "./Footer.module.css"
+import { emailIcon, githubIcon } from '../../../public/assests/svgs'
+import styles from './Footer.module.css'
 
 export default function Footer() {
   return (

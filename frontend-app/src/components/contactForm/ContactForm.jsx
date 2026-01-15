@@ -1,34 +1,33 @@
-"use client"
+'use client'
 
-import { useForm } from "@formspree/react"
-import { useState } from "react"
-import FormCode from "../formCode/FormCode"
-import ThankYouText from "../thankYouText/ThankYouText"
-import styles from "./ContactForm.module.css"
+import { useForm } from '@formspree/react'
+import { useState } from 'react'
+import FormCode from '../formCode/FormCode'
+import ThankYouText from '../thankYouText/ThankYouText'
+import styles from './ContactForm.module.css'
 
 export default function ContactForm() {
   const [state, handleSubmit, reset] = useForm(
-    process.env.NEXT_PUBLIC_FORMSPREE_ID
+    process.env.NEXT_PUBLIC_FORMSPREE_ID,
   )
 
   const [inputs, setInputs] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   })
 
   // const [isSuccess, setSuccess] = useState(false)
 
-  const handleChange = (event) => {
-    event.preventDefault()
-    setInputs((prev) => ({
+  const handleChange = event => {
+    setInputs(prev => ({
       ...prev,
       [event.target.id]: event.target.value,
     }))
   }
 
   const handleReset = () => {
-    setInputs({ name: "", email: "", message: "" })
+    setInputs({ name: '', email: '', message: '' })
     reset()
   }
 
@@ -38,7 +37,10 @@ export default function ContactForm() {
         {state.succeeded ? (
           <ThankYouText handleReset={handleReset} />
         ) : (
-          <form className={styles.contactForm} onSubmit={handleSubmit}>
+          <form
+            className={styles.contactForm}
+            onSubmit={handleSubmit}
+          >
             <div className={styles.formGroup}>
               <label>_name:</label>
               <input
@@ -73,7 +75,7 @@ export default function ContactForm() {
             </div>
             <div className={styles.formGroup}>
               <button type="submit">
-                {state.submitting ? "submitting.." : "submit-message"}
+                {state.submitting ? 'submitting..' : 'submit-message'}
               </button>
             </div>
           </form>

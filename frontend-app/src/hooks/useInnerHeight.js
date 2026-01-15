@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
 
 export default function useInnerHeight() {
   const [innerHeight, setInnerHeight] = useState(window?.innerHeight)
@@ -8,10 +8,10 @@ export default function useInnerHeight() {
       setInnerHeight(window?.innerHeight)
     }
 
-    window.addEventListener("resize", handleResize)
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      window.removeEventListener("resize", handleResize)
+      window.removeEventListener('resize', handleResize)
     }
   }, [])
 
