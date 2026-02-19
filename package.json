@@ -4,7 +4,7 @@
 		"concurrently": "^9.0.0"
 	},
 	"scripts": {
-		"dev": "concurrently -n web,studio -c auto \"npm run dev:web\" \"npm run dev:studio\"",
+		"dev": "concurrently -n web,studio -c auto --kill-others-on-fail --restart-tries 3 \"npm run dev:web\" \"npm run dev:studio\"",
 		"dev:web": "npm --prefix frontend-app run dev",
 		"dev:studio": "npm --prefix portfolio-studio run dev"
 	}
