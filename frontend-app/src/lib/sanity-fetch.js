@@ -1,11 +1,11 @@
-import { client } from "./client"
+import { sanityClient } from "@/utils/configSanity"
 
 export async function sanityFetch({
   query,
   params = {},
   tags = [],
 }) {
-  return client.fetch(query, params, {
+  return sanityClient.fetch(query, params, {
     next: {
       tags,
     },
