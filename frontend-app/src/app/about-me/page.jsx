@@ -33,7 +33,7 @@ async function getData() {
 
   const res = await sanityFetch({
       query: query,
-      tags: ["about"],
+      tags: ["aboutMe"],
     })
 
   return res

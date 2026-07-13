@@ -25,7 +25,11 @@ async function getTags() {
     _id, name, icon,
     'iconUrl': icon.asset->url
   }`
-  const res = await sanityClient.fetch(query)
+
+  const res = await sanityFetch({
+      query: query,
+      tags: ["stackTags", "projects"],
+    })
 
   return res
 }
@@ -40,10 +44,12 @@ async function getProjects(searchParams) {
       'coverUrl': projectCoverImage.asset->url
     }
   }`
+
   const res = await sanityFetch({
       query: query,
-      tags: ["project"],
+      tags: ["stackTags", "projects"],
     })
+
   return res
 }
 
