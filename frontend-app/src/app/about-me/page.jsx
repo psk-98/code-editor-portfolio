@@ -1,6 +1,6 @@
 import FoldersWrapper from '@/components/folderComponent/FoldersWrapper'
 import TextArea from '@/components/textArea/TextArea'
-import { sanityClient } from '@/utils/configSanity'
+import { sanityFetch } from '@/lib/sanity-fetch'
 import { filterByFile } from '@/utils/filterByFile'
 
 export default async function About({ searchParams }) {
@@ -30,10 +30,16 @@ async function getData() {
   const query = `*[_type == 'aboutMe'] {
         _id,folder,file,content
       } | order(file asc)`
-  const res = await sanityClient.fetch(query)
+
+  const res = await sanityFetch({
+      query: query,
+      tags: ["aboutMe"],
+    })
 
   return res
 }
+
+
 
 async function getCode() {
   const res = await fetch(`https://api.github.com/users/psk-98/gists`)

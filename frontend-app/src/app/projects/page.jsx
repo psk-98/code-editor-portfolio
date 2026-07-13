@@ -25,22 +25,30 @@ async function getTags() {
     _id, name, icon,
     'iconUrl': icon.asset->url
   }`
-  const res = await sanityClient.fetch(query)
+
+  const res = await sanityFetch({
+      query: query,
+      tags: ["stackTags", "projects"],
+    })
 
   return res
 }
 
 async function getProjects(searchParams) {
-  const query = `*[_type=='stackTags' && name=='${searchParams?.stack}'] 
+  const query = `*[_type=='stackTags' && name=='${searchParams?.stack}']
   {
     _id, name,
-    "projects": *[_type == 'projects' && references(^._id)] 
+    "projects": *[_type == 'projects' && references(^._id)]
     {
       name, description, link, category,
       'coverUrl': projectCoverImage.asset->url
     }
   }`
-  const res = await sanityClient.fetch(query)
+
+  const res = await sanityFetch({
+      query: query,
+      tags: ["stackTags", "projects"],
+    })
 
   return res
 }
