@@ -1,5 +1,6 @@
 import StackFile from '@/components/StackComponent/StackFile'
 import ProjectsDisplay from '@/components/projectsDisplay/ProjectsDisplay'
+import { sanityFetch } from '@/lib/sanity-fetch'
 import { sanityClient } from '@/utils/configSanity'
 
 export default async function Projects({ searchParams }) {
