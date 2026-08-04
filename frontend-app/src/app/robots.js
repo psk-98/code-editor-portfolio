@@ -5,5 +5,6 @@ export default function robots() {
       allow: '/',
     },
     sitemap: 'https://paulkhoza.co.za/sitemap.xml',
+    host: 'https://paulkhoza.co.za',
   }
 }
