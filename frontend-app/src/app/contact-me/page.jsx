@@ -24,7 +24,7 @@ async function getData() {
 export const metadata = {
   title: 'Contact Me | Website Software Developer, Frontend, Backend',
   description:
-    'Paul Khoza is a proficient software developer specializing in creating websites. Discover more about his contributions to the development of software for the web.',
+    'Get in touch with Paul Khoza to discuss website development, software projects, or collaboration. Reach out for professional web development services today.',
   alternates: {
     canonical: "/contact-me",
   },}

@@ -50,7 +50,7 @@ async function getCode() {
 export const metadata = {
   title: 'About Me | Website Software Developer, Frontend, Backend',
   description:
-    'Paul Khoza is a proficient software developer specializing in creating websites. Discover more about his contributions to the development of software for the web.',
+    'Learn about Paul Khoza, a software developer passionate about building user-friendly websites, solving technical challenges, and creating reliable digital solutions.',
   alternates: {
     canonical: "/about-me",
   },}
