@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
     "check": "biome format . && npm run lint",
     "format": "biome format --write .",
-    "test-all": "npm run check && npm run build"
+    "test-all": "npm run check && npm run typecheck && npm run build"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
@@ -31,10 +32,14 @@
   "devDependencies": {
     "@biomejs/biome": "^2.5.7",
     "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.3.0",
     "husky": "^9.1.7",
     "postcss": "^8.5.25",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.4.5"
   }
 }
