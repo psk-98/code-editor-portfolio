@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --headline-text-size: 7.75rem;
+  --subHeadline-text-size: 4rem;
+  --body-text-size: 2.25rem;
+  --labels-text-size: 2rem;
+  --code-snippets-text-size: 1.75rem;
+  --line-color: #1e2d3d;
+  --dark-background-color: #010c15;
+  --light-background-color: #011627;
+  --white-color: #e5e9f0;
+  --green-color: #43d9ad;
+  --gray-color: #607b96;
+  --purple-color: #4d5bce;
+  --brown-color: #fea55f;
+  --max-height-desktop-between-footer-nav: calc(100vh - 10rem - 6.25rem - 7rem);
+}
+
+@theme inline {
+  --color-line: var(--line-color);
+  --color-canvas: var(--dark-background-color);
+  --color-panel: var(--light-background-color);
+  --color-foreground: var(--white-color);
+  --color-muted: var(--gray-color);
+  --color-accent-green: var(--green-color);
+  --color-accent-purple: var(--purple-color);
+  --color-accent-orange: var(--brown-color);
+  --font-mono: var(--font-fira-code);
+  --text-headline: var(--headline-text-size);
+  --text-subheadline: var(--subHeadline-text-size);
+  --text-body: var(--body-text-size);
+  --text-label: var(--labels-text-size);
+  --text-code: var(--code-snippets-text-size);
+}
+
+@layer base {
+  * {
+    list-style: none;
+    font-weight: 400;
+  }
+
+  html,
+  body {
+    font-size: 8px;
+    background: var(--dark-background-color);
+    color: var(--white-color);
+  }
+
+  button {
+    font-family: var(--font-fira-code);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+@media (min-width: 1024px) {
+  body {
+    overflow: hidden !important;
+  }
+}
+
+.loader {
+  position: relative;
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  margin: 2rem auto;
+  color: var(--white-color);
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3rem;
+  height: 3rem;
+  box-sizing: border-box;
+  content: "";
+  background-color: var(--white-color);
+  border-radius: 50%;
+  transform: scale(0.5) translate(0, 0);
+  animation: animloader 1s infinite ease-in-out;
+}
+
+.loader::before {
+  background-color: var(--gray-color);
+  transform: scale(0.5) translate(-6rem, -6rem);
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animloader {
+  50% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
