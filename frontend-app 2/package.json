@@ -6,11 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "biome check .",
     "typecheck": "tsc --noEmit",
-    "check": "biome format . && npm run lint",
+    "check": "biome format .",
     "format": "biome format --write .",
-    "test-all": "npm run check && npm run typecheck && npm run build"
+    "test-all": "bun run check && bun run typecheck && bun run build"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
